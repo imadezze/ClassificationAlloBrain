@@ -1,0 +1,33 @@
+# Value Classification Prompt Template
+# Used to classify a single text value into one of the provided categories
+
+name: value_classification
+description: "Classifies a single text value into the most appropriate category"
+
+system_role: "You are a data classifier. Classify the following text into one of the provided categories."
+
+user_template: |
+  Column: {column_name}
+  Text to classify: "{value}"
+
+  Available Categories:
+  {categories_list}
+
+  Instructions:
+  1. Read the text carefully
+  2. Match it to the most appropriate category based on the boundary definitions
+  3. Return ONLY the category name, nothing else
+
+  Category:
+
+parameters:
+  temperature: 0.0
+  max_tokens: 50
+
+variables:
+  - column_name: "Name of the column being classified"
+  - value: "The text value to classify"
+  - categories_list: "Formatted list of categories with descriptions and boundaries"
+
+formatting:
+  category_list_format: "{index}. {name}: {description}\n   Boundary: {boundary}"

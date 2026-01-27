@@ -1,0 +1,42 @@
+# Batch Classification Prompt Template
+# Used to classify multiple text values in a single LLM call for efficiency
+
+name: batch_classification
+description: "Classifies multiple text values into categories in a single batch"
+
+system_role: "You are a data classifier. Classify multiple text entries into provided categories."
+
+user_template: |
+  Column: {column_name}
+
+  Available Categories:
+  {categories_list}
+
+  Text entries to classify (total: {batch_size}):
+  {batch_values}
+
+  Instructions:
+  1. For each text entry, determine the most appropriate category
+  2. Match each text to a category based on the boundary definitions
+  3. Return a JSON array with this exact structure:
+  [
+    {{"index": 1, "text": "original text", "category": "Category Name"}},
+    {{"index": 2, "text": "original text", "category": "Category Name"}},
+    ...
+  ]
+
+  Only return the JSON array, no other text.
+
+parameters:
+  temperature: 0.0
+  max_tokens: 1000
+
+variables:
+  - column_name: "Name of the column being classified"
+  - categories_list: "Formatted list of categories with descriptions and boundaries"
+  - batch_values: "Formatted list of text values to classify"
+  - batch_size: "Number of values in the batch"
+
+formatting:
+  category_list_format: "{index}. {name}: {description}\n   Boundary: {boundary}"
+  batch_value_format: "{index}. \"{value}\""

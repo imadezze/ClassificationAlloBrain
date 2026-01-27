@@ -1,0 +1,45 @@
+# Category Refinement Prompt Template
+# Used to refine existing categories based on user feedback
+
+name: category_refinement
+description: "Refines category definitions based on user feedback and data context"
+
+system_role: "You are refining category definitions based on user feedback."
+
+user_template: |
+  Current Categories:
+  {current_categories}
+
+  Sample Data:
+  {sample_values}
+
+  User Feedback: {feedback}
+
+  Task: Refine the categories based on the feedback. Maintain the JSON structure but update names, descriptions, boundaries, or examples as needed.
+
+  Guidelines:
+  - Keep the same number of categories unless feedback explicitly asks to add/remove
+  - Ensure boundaries are clear and non-overlapping
+  - Update examples to reflect the refined categories
+  - Maintain consistency in naming conventions
+
+  Return the refined categories as a JSON array with this structure:
+  [
+    {{
+      "name": "Category Name",
+      "description": "Detailed description",
+      "boundary": "Clear inclusion/exclusion criteria",
+      "examples": ["example1", "example2"]
+    }}
+  ]
+
+  Only return the JSON array, no other text.
+
+parameters:
+  temperature: 0.2
+  max_tokens: 2000
+
+variables:
+  - current_categories: "JSON representation of current category definitions"
+  - sample_values: "Formatted list of sample values from the data"
+  - feedback: "User's feedback on what to change/improve"

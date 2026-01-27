@@ -3,6 +3,7 @@ import json
 from typing import List, Dict, Optional
 from litellm import completion
 from src.config import Config
+from src.services.prompts.prompt_loader import PromptLoader
 
 
 class LLMService:
@@ -13,6 +14,7 @@ class LLMService:
         self.model = Config.LLM_MODEL
         self.temperature = Config.LLM_TEMPERATURE
         self.max_tokens = Config.LLM_MAX_TOKENS
+        self.prompt_loader = PromptLoader()
 
     def _call_llm(
         self,
@@ -45,6 +47,53 @@ class LLMService:
         except Exception as e:
             raise Exception(f"Error calling LLM: {str(e)}")
 
+    def _extract_json_from_response(self, response: str) -> str:
+        """
+        Extract JSON from LLM response (handles markdown code blocks)
+
+        Args:
+            response: Raw LLM response
+
+        Returns:
+            Cleaned JSON string
+        """
+        response = response.strip()
+        if response.startswith("```json"):
+            response = response[7:]
+        if response.startswith("```"):
+            response = response[3:]
+        if response.endswith("```"):
+            response = response[:-3]
+        return response.strip()
+
+    def _format_categories_list(self, categories: List[Dict]) -> str:
+        """
+        Format categories for inclusion in prompts
+
+        Args:
+            categories: List of category definitions
+
+        Returns:
+            Formatted string with categories
+        """
+        formatting = self.prompt_loader.get_formatting_rules("value_classification")
+        format_template = formatting.get(
+            "category_list_format",
+            "{index}. {name}: {description}\n   Boundary: {boundary}",
+        )
+
+        categories_text = []
+        for i, cat in enumerate(categories):
+            formatted = format_template.format(
+                index=i + 1,
+                name=cat["name"],
+                description=cat["description"],
+                boundary=cat["boundary"],
+            )
+            categories_text.append(formatted)
+
+        return "\n".join(categories_text)
+
     def discover_categories(
         self, column_name: str, sample_values: List[str], num_categories: int = 5
     ) -> Dict:
@@ -59,51 +108,30 @@ class LLMService:
         Returns:
             Dictionary with discovered categories and their definitions
         """
+        # Format sample values
         sample_text = "\n".join([f"- {val}" for val in sample_values[:50]])
 
-        prompt = f"""You are a data analyst helping to categorize text data.
-
-Column Name: {column_name}
-
-Sample Values:
-{sample_text}
-
-Task: Analyze these sample values and suggest {num_categories} meaningful categories that would best organize this data.
-
-For each category, provide:
-1. Category Name: A clear, descriptive name
-2. Description: A detailed description of what belongs in this category
-3. Boundary Definition: Clear criteria for inclusion/exclusion
-4. Example Values: 2-3 example values from the samples that fit this category
-
-Return your response as a JSON array with this structure:
-[
-  {{
-    "name": "Category Name",
-    "description": "Detailed description",
-    "boundary": "Clear inclusion/exclusion criteria",
-    "examples": ["example1", "example2"]
-  }}
-]
-
-Only return the JSON array, no other text."""
-
-        messages = [{"role": "user", "content": prompt}]
+        # Load and format prompt
+        prompt_data = self.prompt_loader.format_prompt(
+            "category_discovery",
+            {
+                "column_name": column_name,
+                "sample_values": sample_text,
+                "num_categories": num_categories,
+            },
+        )
 
         try:
-            response = self._call_llm(messages, temperature=0.3, max_tokens=2000)
+            # Call LLM with prompt parameters
+            response = self._call_llm(
+                prompt_data["messages"],
+                temperature=prompt_data["parameters"].get("temperature"),
+                max_tokens=prompt_data["parameters"].get("max_tokens"),
+            )
 
-            # Extract JSON from response
-            response = response.strip()
-            if response.startswith("```json"):
-                response = response[7:]
-            if response.startswith("```"):
-                response = response[3:]
-            if response.endswith("```"):
-                response = response[:-3]
-            response = response.strip()
-
-            categories = json.loads(response)
+            # Extract and parse JSON
+            json_str = self._extract_json_from_response(response)
+            categories = json.loads(json_str)
 
             return {
                 "success": True,
@@ -134,32 +162,25 @@ Only return the JSON array, no other text."""
         Returns:
             Dictionary with classification result
         """
-        categories_text = "\n".join(
-            [
-                f"{i+1}. {cat['name']}: {cat['description']}\n   Boundary: {cat['boundary']}"
-                for i, cat in enumerate(categories)
-            ]
+        # Format categories list
+        categories_text = self._format_categories_list(categories)
+
+        # Load and format prompt
+        prompt_data = self.prompt_loader.format_prompt(
+            "value_classification",
+            {
+                "column_name": column_name,
+                "value": value,
+                "categories_list": categories_text,
+            },
         )
 
-        prompt = f"""You are a data classifier. Classify the following text into one of the provided categories.
-
-Column: {column_name}
-Text to classify: "{value}"
-
-Available Categories:
-{categories_text}
-
-Instructions:
-1. Read the text carefully
-2. Match it to the most appropriate category based on the boundary definitions
-3. Return ONLY the category name, nothing else
-
-Category:"""
-
-        messages = [{"role": "user", "content": prompt}]
-
         try:
-            response = self._call_llm(messages, temperature=0.0, max_tokens=50)
+            response = self._call_llm(
+                prompt_data["messages"],
+                temperature=prompt_data["parameters"].get("temperature"),
+                max_tokens=prompt_data["parameters"].get("max_tokens"),
+            )
             predicted_category = response.strip()
 
             # Find matching category
@@ -204,6 +225,8 @@ Category:"""
         Returns:
             List of classification results
         """
+        # For now, use sequential classification
+        # TODO: Implement true batch classification with batch_classification prompt
         results = []
         for value in values:
             result = self.classify_value(value, categories, column_name)
@@ -228,39 +251,30 @@ Category:"""
         Returns:
             Dictionary with refined categories
         """
-        categories_text = json.dumps(categories, indent=2)
+        # Format data
+        categories_json = json.dumps(categories, indent=2)
         sample_text = "\n".join([f"- {val}" for val in sample_values[:30]])
 
-        prompt = f"""You are refining category definitions based on user feedback.
-
-Current Categories:
-{categories_text}
-
-Sample Data:
-{sample_text}
-
-User Feedback: {feedback}
-
-Task: Refine the categories based on the feedback. Maintain the JSON structure but update names, descriptions, boundaries, or examples as needed.
-
-Return the refined categories as a JSON array with the same structure."""
-
-        messages = [{"role": "user", "content": prompt}]
+        # Load and format prompt
+        prompt_data = self.prompt_loader.format_prompt(
+            "category_refinement",
+            {
+                "current_categories": categories_json,
+                "sample_values": sample_text,
+                "feedback": feedback,
+            },
+        )
 
         try:
-            response = self._call_llm(messages, temperature=0.2, max_tokens=2000)
+            response = self._call_llm(
+                prompt_data["messages"],
+                temperature=prompt_data["parameters"].get("temperature"),
+                max_tokens=prompt_data["parameters"].get("max_tokens"),
+            )
 
-            # Extract JSON from response
-            response = response.strip()
-            if response.startswith("```json"):
-                response = response[7:]
-            if response.startswith("```"):
-                response = response[3:]
-            if response.endswith("```"):
-                response = response[:-3]
-            response = response.strip()
-
-            refined_categories = json.loads(response)
+            # Extract and parse JSON
+            json_str = self._extract_json_from_response(response)
+            refined_categories = json.loads(json_str)
 
             return {
                 "success": True,
