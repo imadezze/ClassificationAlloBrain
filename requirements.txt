@@ -1,0 +1,16 @@
+# Core Dependencies
+streamlit>=1.31.0
+pandas>=2.2.0
+openpyxl>=3.1.0
+xlrd>=2.0.1
+
+# LLM Integration
+litellm>=1.30.0
+openai>=1.10.0
+
+# Data Processing
+chardet>=5.2.0
+python-dotenv>=1.0.0
+
+# Type hints
+typing-extensions>=4.9.0
