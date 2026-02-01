@@ -44,7 +44,7 @@ def render_data_preview(df: pd.DataFrame, max_rows: int = None) -> None:
     # Data preview
     st.dataframe(
         df.head(display_rows),
-        use_container_width=True,
+        width="stretch",
         height=400,
     )
 
@@ -61,4 +61,4 @@ def render_data_preview(df: pd.DataFrame, max_rows: int = None) -> None:
                     "Unique": df[col].nunique(),
                 }
             )
-        st.dataframe(pd.DataFrame(col_info), use_container_width=True)
+        st.dataframe(pd.DataFrame(col_info), width="stretch")

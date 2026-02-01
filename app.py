@@ -11,6 +11,8 @@ from src.ui.components import (
     render_column_selector,
     render_category_discovery,
     render_classification_interface,
+    render_session_loader,
+    render_quick_load_button,
 )
 
 
@@ -76,6 +78,14 @@ def render_sidebar():
         st.code(f"Model: {Config.LLM_MODEL}")
         st.code(f"Temperature: {Config.LLM_TEMPERATURE}")
         st.code(f"Max Preview: {Config.MAX_PREVIEW_ROWS} rows")
+
+        st.markdown("---")
+
+        # Session Management
+        st.subheader("💾 Sessions")
+
+        # Quick load button for last session
+        render_quick_load_button()
 
         st.markdown("---")
 

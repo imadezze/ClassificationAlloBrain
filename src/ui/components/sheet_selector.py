@@ -1,7 +1,8 @@
-"""Sheet Selector Component for multi-sheet Excel files"""
+"""Sheet Selector Component for multi-sheet Excel files with database integration"""
 import streamlit as st
 from typing import Optional
 import pandas as pd
+from src.database.repositories import SessionRepository
 
 
 def render_sheet_selector(sheets: dict) -> Optional[str]:
@@ -24,6 +25,14 @@ def render_sheet_selector(sheets: dict) -> Optional[str]:
         selected_sheet = list(sheets.keys())[0]
         st.info(f"Auto-selected sheet: **{selected_sheet}**")
         st.session_state.selected_sheet = selected_sheet
+
+        # Save to database
+        if "db_session_id" in st.session_state:
+            SessionRepository.update_session(
+                st.session_state.db_session_id,
+                selected_sheet=selected_sheet
+            )
+
         return selected_sheet
 
     # Multiple sheets - let user choose
@@ -35,7 +44,7 @@ def render_sheet_selector(sheets: dict) -> Optional[str]:
     for sheet_name in sheet_names:
         df = sheets[sheet_name]
         with st.expander(f"📄 {sheet_name} ({len(df)} rows, {len(df.columns)} columns)"):
-            st.dataframe(df.head(3), use_container_width=True)
+            st.dataframe(df.head(3), width="stretch")
 
     # Sheet selector
     selected_sheet = st.selectbox(
@@ -47,6 +56,14 @@ def render_sheet_selector(sheets: dict) -> Optional[str]:
 
     if selected_sheet:
         st.session_state.selected_sheet = selected_sheet
+
+        # Save to database
+        if "db_session_id" in st.session_state:
+            SessionRepository.update_session(
+                st.session_state.db_session_id,
+                selected_sheet=selected_sheet
+            )
+
         return selected_sheet
 
     return None

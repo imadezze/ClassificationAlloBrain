@@ -1,8 +1,9 @@
-"""Column Selector Component with auto-detection"""
+"""Column Selector Component with auto-detection and database integration"""
 import streamlit as st
 import pandas as pd
 from typing import Optional
 from src.data_ingestion import ColumnDetector
+from src.database.repositories import SessionRepository
 
 
 def render_column_selector(df: pd.DataFrame) -> Optional[str]:
@@ -76,10 +77,21 @@ def render_column_selector(df: pd.DataFrame) -> Optional[str]:
         st.success(f"✓ Selected column: **{selected_column}**")
         st.session_state.selected_column = selected_column
 
+        # Save to database
+        if "db_session_id" in st.session_state:
+            # Get metadata for all columns
+            all_column_info = ColumnDetector.get_all_column_info(df)
+
+            SessionRepository.save_column_selection(
+                st.session_state.db_session_id,
+                selected_column=selected_column,
+                column_metadata=all_column_info,
+            )
+
         # Show sample values from selected column
         with st.expander("Preview selected column values"):
             sample_df = df[[selected_column]].dropna().head(10)
-            st.dataframe(sample_df, use_container_width=True)
+            st.dataframe(sample_df, width="stretch")
 
         return selected_column
 

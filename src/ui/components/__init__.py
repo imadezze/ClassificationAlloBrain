@@ -5,6 +5,7 @@ from .data_preview import render_data_preview
 from .column_selector import render_column_selector
 from .category_discovery import render_category_discovery
 from .classification_interface import render_classification_interface
+from .session_manager import render_session_loader, render_quick_load_button
 
 __all__ = [
     "render_file_upload",
@@ -13,4 +14,6 @@ __all__ = [
     "render_column_selector",
     "render_category_discovery",
     "render_classification_interface",
+    "render_session_loader",
+    "render_quick_load_button",
 ]

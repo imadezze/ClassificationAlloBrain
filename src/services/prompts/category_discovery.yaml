@@ -12,7 +12,9 @@ user_template: |
   Sample Values:
   {sample_values}
 
-  Task: Analyze these sample values and suggest {num_categories} meaningful categories that would best organize this data.
+  Task: Analyze these sample values and suggest EXACTLY {num_categories} meaningful categories that would best organize this data.
+
+  IMPORTANT: You must return exactly {num_categories} categories, no more and no less.
 
   For each category, provide:
   1. Category Name: A clear, descriptive name
