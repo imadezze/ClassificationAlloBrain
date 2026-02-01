@@ -80,6 +80,9 @@ class Session(Base):
     classifications = relationship(
         "Classification", back_populates="session", cascade="all, delete-orphan"
     )
+    few_shot_examples = relationship(
+        "FewShotExample", back_populates="session", cascade="all, delete-orphan"
+    )
 
 
 class Upload(Base):
@@ -165,6 +168,42 @@ class Classification(Base):
     feedback = relationship(
         "Feedback", back_populates="classification", uselist=False, cascade="all, delete-orphan"
     )
+
+
+class FewShotExample(Base):
+    """
+    Few-shot examples for improving classification accuracy
+    Can be session-specific or global
+    """
+
+    __tablename__ = "few_shot_examples"
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    session_id = Column(
+        UUID(as_uuid=True),
+        ForeignKey("sessions.id"),
+        nullable=True,
+        comment="Session ID if example is session-specific, NULL if global"
+    )
+
+    # Example data
+    example_text = Column(Text, nullable=False, comment="Example text to classify")
+    category = Column(String(255), nullable=False, comment="Correct category for this example")
+    reasoning = Column(Text, nullable=True, comment="Optional reasoning for classification")
+
+    # Metadata
+    column_name = Column(String(255), nullable=True, comment="Column this example applies to")
+    is_global = Column(Boolean, default=False, comment="True if example applies to all sessions")
+
+    # Order for display
+    display_order = Column(Integer, nullable=True, comment="Order to display examples")
+
+    # Timestamps
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+
+    # Relationships
+    session = relationship("Session", back_populates="few_shot_examples")
 
 
 class Feedback(Base):

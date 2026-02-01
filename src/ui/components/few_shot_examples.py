@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 from typing import List, Dict, Optional
 import logging
+from src.database.repositories import FewShotExampleRepository
 
 logger = logging.getLogger(__name__)
 
@@ -21,9 +22,30 @@ def render_few_shot_examples(categories: List[Dict], column_name: str) -> Option
     st.subheader("📚 Few-Shot Examples (Optional)")
     st.caption("Provide examples to guide the AI's classification. This can significantly improve accuracy.")
 
-    # Initialize examples in session state
-    if "few_shot_examples" not in st.session_state:
-        st.session_state.few_shot_examples = []
+    # Load examples from database if we have a session
+    if "few_shot_examples_loaded" not in st.session_state:
+        if "db_session_id" in st.session_state:
+            try:
+                # Load examples from database
+                db_examples = FewShotExampleRepository.get_session_examples(
+                    st.session_state.db_session_id,
+                    column_name=column_name
+                )
+
+                # Convert to session state format
+                st.session_state.few_shot_examples = FewShotExampleRepository.examples_to_dict(db_examples)
+                st.session_state.few_shot_examples_loaded = True
+
+                if db_examples:
+                    logger.info(f"Loaded {len(db_examples)} few-shot examples from database")
+            except Exception as e:
+                logger.warning(f"Could not load examples from database: {e}")
+                st.session_state.few_shot_examples = []
+                st.session_state.few_shot_examples_loaded = True
+        else:
+            # No session yet, start with empty
+            st.session_state.few_shot_examples = []
+            st.session_state.few_shot_examples_loaded = True
 
     # Show info
     with st.expander("ℹ️ How Few-Shot Learning Works"):
@@ -89,6 +111,23 @@ def render_few_shot_examples(categories: List[Dict], column_name: str) -> Option
                 }
 
                 st.session_state.few_shot_examples.append(new_example)
+
+                # Save to database if we have a session
+                if "db_session_id" in st.session_state:
+                    try:
+                        FewShotExampleRepository.create_example(
+                            example_text=example_text,
+                            category=example_category,
+                            session_id=st.session_state.db_session_id,
+                            reasoning=reasoning if reasoning else None,
+                            column_name=column_name,
+                            is_global=False,
+                            display_order=len(st.session_state.few_shot_examples) - 1
+                        )
+                        logger.info(f"Saved example to database: {example_text}")
+                    except Exception as e:
+                        logger.warning(f"Could not save example to database: {e}")
+
                 st.success(f"✓ Added example: '{example_text}' → {example_category}")
                 st.rerun()
 
@@ -117,6 +156,7 @@ def render_few_shot_examples(categories: List[Dict], column_name: str) -> Option
 
                     if st.button("✓ Import Examples", type="primary"):
                         # Convert to examples format
+                        imported_count = 0
                         for _, row in examples_df.iterrows():
                             new_example = {
                                 "text": str(row["text"]),
@@ -125,7 +165,23 @@ def render_few_shot_examples(categories: List[Dict], column_name: str) -> Option
                             }
                             st.session_state.few_shot_examples.append(new_example)
 
-                        st.success(f"✓ Imported {len(examples_df)} examples")
+                            # Save to database if we have a session
+                            if "db_session_id" in st.session_state:
+                                try:
+                                    FewShotExampleRepository.create_example(
+                                        example_text=str(row["text"]),
+                                        category=str(row["category"]),
+                                        session_id=st.session_state.db_session_id,
+                                        reasoning=str(row.get("reasoning", "")) if "reasoning" in row else None,
+                                        column_name=column_name,
+                                        is_global=False,
+                                        display_order=len(st.session_state.few_shot_examples) - 1
+                                    )
+                                    imported_count += 1
+                                except Exception as e:
+                                    logger.warning(f"Could not save example to database: {e}")
+
+                        st.success(f"✓ Imported {len(examples_df)} examples ({imported_count} saved to database)")
                         st.rerun()
 
             except Exception as e:
@@ -168,6 +224,24 @@ def render_few_shot_examples(categories: List[Dict], column_name: str) -> Option
                     with col2:
                         if st.button("🗑️ Remove", key=f"remove_example_{category}_{i}"):
                             st.session_state.few_shot_examples.remove(example)
+
+                            # Delete from database if we have a session
+                            if "db_session_id" in st.session_state:
+                                try:
+                                    # Find and delete the example from database
+                                    db_examples = FewShotExampleRepository.get_session_examples(
+                                        st.session_state.db_session_id,
+                                        column_name=column_name
+                                    )
+                                    for db_ex in db_examples:
+                                        if (db_ex.example_text == example["text"] and
+                                            db_ex.category == example["category"]):
+                                            FewShotExampleRepository.delete_example(str(db_ex.id))
+                                            logger.info(f"Deleted example from database: {db_ex.id}")
+                                            break
+                                except Exception as e:
+                                    logger.warning(f"Could not delete example from database: {e}")
+
                             st.rerun()
 
         # Clear all button
@@ -175,6 +249,17 @@ def render_few_shot_examples(categories: List[Dict], column_name: str) -> Option
         with col2:
             if st.button("🗑️ Clear All Examples", type="secondary"):
                 st.session_state.few_shot_examples = []
+
+                # Delete all from database if we have a session
+                if "db_session_id" in st.session_state:
+                    try:
+                        count = FewShotExampleRepository.delete_session_examples(
+                            st.session_state.db_session_id
+                        )
+                        logger.info(f"Deleted {count} examples from database")
+                    except Exception as e:
+                        logger.warning(f"Could not delete examples from database: {e}")
+
                 st.rerun()
 
         # Return examples for use in classification

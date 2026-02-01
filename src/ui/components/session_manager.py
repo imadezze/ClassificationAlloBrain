@@ -2,7 +2,12 @@
 import streamlit as st
 from typing import Optional
 from datetime import datetime
-from src.database.repositories import SessionRepository, UploadRepository, ClassificationRepository
+from src.database.repositories import (
+    SessionRepository,
+    UploadRepository,
+    ClassificationRepository,
+    FewShotExampleRepository
+)
 from src.storage import SupabaseStorage
 from src.data_ingestion import FileParser
 import logging
@@ -216,6 +221,23 @@ def load_session(session_id: str) -> bool:
         except Exception as e:
             logger.warning(f"Could not load classifications: {e}")
             # Continue anyway - session can still be used
+
+        # Restore few-shot examples from database
+        try:
+            few_shot_examples_db = FewShotExampleRepository.get_session_examples(session_id)
+            if few_shot_examples_db:
+                logger.info(f"Loading {len(few_shot_examples_db)} few-shot examples from database")
+
+                # Convert to session state format
+                st.session_state.few_shot_examples = FewShotExampleRepository.examples_to_dict(
+                    few_shot_examples_db
+                )
+                st.session_state.few_shot_examples_loaded = True
+
+                logger.info(f"Restored {len(few_shot_examples_db)} few-shot examples")
+        except Exception as e:
+            logger.warning(f"Could not load few-shot examples: {e}")
+            # Continue anyway - examples are optional
 
         logger.info(f"Successfully loaded session {session_id}")
         return True
