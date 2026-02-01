@@ -8,6 +8,7 @@ from src.services import LLMService
 from src.data_ingestion import DataSampler
 from src.database.repositories import SessionRepository, ClassificationRepository
 from src.config import Config
+from src.ui.components.few_shot_examples import render_few_shot_examples, format_examples_for_prompt
 
 logger = logging.getLogger(__name__)
 
@@ -38,12 +39,14 @@ def retry_classification_with_feedback(
     for idx in selected_indices:
         value = results[idx]["value"]
 
-        # Classify with feedback
+        # Classify with feedback (and few-shot examples if available)
+        few_shot_examples = st.session_state.get("few_shot_examples")
         result = llm_service.classify_value_with_feedback(
             value=value,
             categories=categories,
             column_name=column,
-            feedback=feedback
+            feedback=feedback,
+            few_shot_examples=few_shot_examples
         )
 
         # Update results
@@ -130,8 +133,13 @@ def render_classification_interface(
                 step=5,
             )
 
+    # Few-shot examples (optional)
+    st.divider()
+    with st.expander("📚 Few-Shot Examples (Optional - Click to expand)", expanded=False):
+        few_shot_examples = render_few_shot_examples(categories, column)
+
     # Classify button
-    if st.button("🚀 Start Classification", type="primary", width="stretch"):
+    if st.button("🚀 Start Classification", type="primary", use_container_width=True):
         # Determine data to classify
         if classification_mode == "Sample (Quick Test)":
             data_to_classify = DataSampler.random_sample(df, sample_size)
@@ -168,8 +176,14 @@ def render_classification_interface(
             # Track execution time
             start_time = time.time()
 
-            # Classify
-            result = llm_service.classify_value(value, categories, column)
+            # Classify (with few-shot examples if provided)
+            few_shot_examples = st.session_state.get("few_shot_examples")
+            result = llm_service.classify_value(
+                value,
+                categories,
+                column,
+                few_shot_examples=few_shot_examples
+            )
 
             # Calculate execution time
             execution_time_ms = int((time.time() - start_time) * 1000)

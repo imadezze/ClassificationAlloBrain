@@ -303,7 +303,7 @@ class LLMService:
 
     def classify_value(
         self, value: str, categories: List[Dict], column_name: str,
-        use_structured_output: bool = True
+        use_structured_output: bool = True, few_shot_examples: Optional[List[Dict]] = None
     ) -> Dict:
         """
         Classify a single value into one of the provided categories
@@ -313,6 +313,7 @@ class LLMService:
             categories: List of category definitions
             column_name: Name of the column
             use_structured_output: Use structured outputs with enum constraint (default: True)
+            few_shot_examples: Optional list of example classifications to guide the model
 
         Returns:
             Dictionary with classification result
@@ -332,6 +333,30 @@ class LLMService:
                 "categories_list": categories_text,
             },
         )
+
+        # Add few-shot examples to prompt if provided
+        if few_shot_examples:
+            examples_text = "\n\n**Examples for guidance:**\n"
+            for i, example in enumerate(few_shot_examples, 1):
+                examples_text += f"\n{i}. Text: \"{example['text']}\"\n"
+                examples_text += f"   Correct Category: {example['category']}\n"
+                if example.get("reasoning"):
+                    examples_text += f"   Reasoning: {example['reasoning']}\n"
+
+            examples_text += "\nNow classify the following text using the same logic:\n"
+
+            # Insert examples before the value
+            user_message = prompt_data["messages"][1]["content"]
+            # Find where to insert (before "Text to classify:")
+            insert_pos = user_message.find("Text to classify:")
+            if insert_pos != -1:
+                prompt_data["messages"][1]["content"] = (
+                    user_message[:insert_pos] +
+                    examples_text +
+                    user_message[insert_pos:]
+                )
+
+            logger.debug(f"Using {len(few_shot_examples)} few-shot examples for classification")
 
         try:
             # Use structured outputs if enabled and using GPT model
@@ -394,7 +419,8 @@ class LLMService:
 
     def classify_value_with_feedback(
         self, value: str, categories: List[Dict], column_name: str,
-        feedback: str, use_structured_output: bool = True
+        feedback: str, use_structured_output: bool = True,
+        few_shot_examples: Optional[List[Dict]] = None
     ) -> Dict:
         """
         Classify a value with additional user feedback
@@ -424,6 +450,27 @@ class LLMService:
                 "categories_list": categories_text,
             },
         )
+
+        # Add few-shot examples to prompt if provided
+        if few_shot_examples:
+            examples_text = "\n\n**Examples for guidance:**\n"
+            for i, example in enumerate(few_shot_examples, 1):
+                examples_text += f"\n{i}. Text: \"{example['text']}\"\n"
+                examples_text += f"   Correct Category: {example['category']}\n"
+                if example.get("reasoning"):
+                    examples_text += f"   Reasoning: {example['reasoning']}\n"
+
+            examples_text += "\nNow classify the following text using the same logic:\n"
+
+            # Insert examples before the value
+            user_message = prompt_data["messages"][1]["content"]
+            insert_pos = user_message.find("Text to classify:")
+            if insert_pos != -1:
+                prompt_data["messages"][1]["content"] = (
+                    user_message[:insert_pos] +
+                    examples_text +
+                    user_message[insert_pos:]
+                )
 
         # Add feedback to the user message
         if feedback:
