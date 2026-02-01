@@ -22,6 +22,7 @@ def retry_classification_with_feedback(
 ):
     """
     Retry classification for selected rows with user feedback
+    Creates a new version instead of updating the existing one
 
     Args:
         df: DataFrame with data
@@ -49,30 +50,45 @@ def retry_classification_with_feedback(
         if result["success"]:
             results[idx]["predicted_category"] = result["predicted_category"]
             results[idx]["confidence"] = result.get("confidence", "medium")
+            results[idx]["version"] = results[idx].get("version", 1) + 1
 
-            # Update database
+            # Save new version to database (don't update, create new record)
             if "db_session_id" in st.session_state:
                 try:
-                    # Find and update the classification record
                     from src.database.connection import DatabaseConnection
                     from src.database.models import Classification
 
                     with DatabaseConnection.get_session() as db:
-                        classification = (
+                        # Get the latest version for this text
+                        latest = (
                             db.query(Classification)
                             .filter(
                                 Classification.session_id == st.session_state.db_session_id,
                                 Classification.input_text == value
                             )
+                            .order_by(Classification.version.desc())
                             .first()
                         )
 
-                        if classification:
-                            classification.predicted_category = result["predicted_category"]
-                            classification.confidence = result.get("confidence", "medium")
-                            db.commit()
+                        # Create new version
+                        new_version = Classification(
+                            session_id=st.session_state.db_session_id,
+                            input_text=value,
+                            row_index=results[idx].get("row_index"),
+                            predicted_category=result["predicted_category"],
+                            confidence=result.get("confidence", "medium"),
+                            version=(latest.version + 1) if latest else 1,
+                            llm_model=Config.LLM_MODEL,
+                            llm_temperature=Config.LLM_TEMPERATURE,
+                            success=True
+                        )
+                        db.add(new_version)
+                        db.commit()
+
+                        logger.info(f"Created classification version {new_version.version} for '{value}'")
+
                 except Exception as e:
-                    logger.warning(f"Failed to update database: {e}")
+                    logger.warning(f"Failed to save new version to database: {e}")
 
 
 def render_classification_interface(
@@ -244,13 +260,128 @@ def render_classification_interface(
 
         # Detailed results table with retry functionality
         with st.expander("🔍 Detailed Results"):
+            # Version selector
+            if "db_session_id" in st.session_state:
+                try:
+                    from src.database.connection import DatabaseConnection
+                    from src.database.models import Classification
+                    from sqlalchemy import func
+
+                    with DatabaseConnection.get_session() as db:
+                        # Get available versions
+                        max_version = (
+                            db.query(func.max(Classification.version))
+                            .filter(Classification.session_id == st.session_state.db_session_id)
+                            .scalar()
+                        ) or 1
+
+                        if max_version > 1:
+                            col_ver1, col_ver2 = st.columns([2, 1])
+
+                            with col_ver1:
+                                selected_version = st.selectbox(
+                                    "📌 View Version",
+                                    options=list(range(1, max_version + 1)),
+                                    index=max_version - 1,  # Default to latest
+                                    format_func=lambda v: f"Version {v}" + (" (Latest)" if v == max_version else " (Initial)" if v == 1 else ""),
+                                    help="Select which version of classifications to view"
+                                )
+
+                            with col_ver2:
+                                show_diff = st.checkbox(
+                                    "🔍 Highlight Changes",
+                                    value=True if selected_version > 1 else False,
+                                    disabled=selected_version == 1,
+                                    help="Show which classifications changed from previous version"
+                                )
+
+                            # Get ALL unique texts that have been classified
+                            all_texts = (
+                                db.query(Classification.input_text)
+                                .filter(Classification.session_id == st.session_state.db_session_id)
+                                .distinct()
+                                .all()
+                            )
+
+                            # For each text, get the classification at the selected version
+                            # (or the latest version <= selected_version if that text wasn't reclassified)
+                            version_results = []
+                            prev_version_map = {}
+
+                            for (text,) in all_texts:
+                                # Get classification at or before selected version
+                                current = (
+                                    db.query(Classification)
+                                    .filter(
+                                        Classification.session_id == st.session_state.db_session_id,
+                                        Classification.input_text == text,
+                                        Classification.version <= selected_version
+                                    )
+                                    .order_by(Classification.version.desc())
+                                    .first()
+                                )
+
+                                if current:
+                                    version_results.append(current)
+
+                                    # Get previous version for comparison
+                                    if show_diff and selected_version > 1:
+                                        prev = (
+                                            db.query(Classification)
+                                            .filter(
+                                                Classification.session_id == st.session_state.db_session_id,
+                                                Classification.input_text == text,
+                                                Classification.version < selected_version
+                                            )
+                                            .order_by(Classification.version.desc())
+                                            .first()
+                                        )
+                                        if prev:
+                                            prev_version_map[text] = prev.predicted_category
+
+                            # Convert to results format
+                            results = []
+                            for c in sorted(version_results, key=lambda x: x.row_index or 0):
+                                changed = False
+                                if show_diff and c.input_text in prev_version_map:
+                                    changed = prev_version_map[c.input_text] != c.predicted_category
+
+                                results.append({
+                                    "value": c.input_text,
+                                    "predicted_category": c.predicted_category,
+                                    "confidence": c.confidence or "medium",
+                                    "success": c.success,
+                                    "row_index": c.row_index,
+                                    "version": c.version,
+                                    "changed": changed
+                                })
+
+                except Exception as e:
+                    logger.warning(f"Could not load version history: {e}")
+
             results_df = pd.DataFrame(results)
+
+            # Add highlighting for changed rows
+            if "changed" in results_df.columns and results_df["changed"].any():
+                st.info(f"🔄 {results_df['changed'].sum()} classifications changed in this version")
 
             # Add row selection for retry
             st.subheader("Select rows to reclassify")
 
             # Create editable dataframe with selection
             edited_df = results_df.copy()
+
+            # Add visual indicator for changed rows
+            if "changed" in edited_df.columns:
+                # Add emoji indicator
+                edited_df.insert(0, "🔄", edited_df["changed"].apply(lambda x: "✨" if x else ""))
+                # Remove the boolean column
+                edited_df = edited_df.drop(columns=["changed"])
+
+            # Remove version column from display
+            if "version" in edited_df.columns:
+                edited_df = edited_df.drop(columns=["version"])
+
             edited_df.insert(0, "Select", False)
 
             # Display with checkboxes
@@ -260,10 +391,17 @@ def render_classification_interface(
                 # Show data editor for selection
                 selected_results = st.data_editor(
                     edited_df,
-                    disabled=["value", "predicted_category", "confidence", "success"],
+                    disabled=[c for c in edited_df.columns if c != "Select"],
                     hide_index=True,
                     use_container_width=True,
-                    key="results_selector"
+                    key=f"results_selector_v{selected_version if 'selected_version' in locals() else 1}",
+                    column_config={
+                        "🔄": st.column_config.TextColumn(
+                            "🔄",
+                            help="✨ = Classification changed from previous version",
+                            width="small"
+                        )
+                    }
                 )
 
             with col2:

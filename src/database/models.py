@@ -142,6 +142,7 @@ class Classification(Base):
     confidence = Column(
         String(20), nullable=True, comment="high | medium | low (from LLM)"
     )
+    version = Column(Integer, nullable=False, default=1, comment="Classification version (increments on retry)")
 
     # LLM metadata
     llm_model = Column(String(100), nullable=True)
