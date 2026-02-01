@@ -392,6 +392,94 @@ class LLMService:
                 "error": str(e),
             }
 
+    def classify_value_with_feedback(
+        self, value: str, categories: List[Dict], column_name: str,
+        feedback: str, use_structured_output: bool = True
+    ) -> Dict:
+        """
+        Classify a value with additional user feedback
+
+        Args:
+            value: Value to classify
+            categories: List of category definitions
+            column_name: Name of the column
+            feedback: User feedback to guide classification
+            use_structured_output: Use structured outputs with enum constraint
+
+        Returns:
+            Dictionary with classification result
+        """
+        # Extract category names for enum constraint
+        category_names = [cat["name"] for cat in categories]
+
+        # Format categories list
+        categories_text = self._format_categories_list(categories)
+
+        # Load and format prompt with feedback
+        prompt_data = self.prompt_loader.format_prompt(
+            "value_classification",
+            {
+                "column_name": column_name,
+                "value": value,
+                "categories_list": categories_text,
+            },
+        )
+
+        # Add feedback to the user message
+        if feedback:
+            user_message = prompt_data["messages"][1]["content"]
+            user_message += f"\n\nAdditional guidance: {feedback}"
+            prompt_data["messages"][1]["content"] = user_message
+
+        try:
+            # Use structured outputs if enabled and using GPT model
+            response_format = None
+            if use_structured_output and self.model.startswith("gpt"):
+                response_format = self._get_classification_schema(category_names)
+                logger.debug(f"Reclassifying with feedback using {len(category_names)} category enum")
+
+            response = self._call_llm(
+                prompt_data["messages"],
+                temperature=prompt_data["parameters"].get("temperature"),
+                max_tokens=prompt_data["parameters"].get("max_tokens"),
+                response_format=response_format
+            )
+
+            # Parse response based on whether structured outputs were used
+            if response_format:
+                # Structured output returns JSON
+                if isinstance(response, str):
+                    result = json.loads(response)
+                else:
+                    result = response
+
+                predicted_category = result.get("category")
+                confidence = result.get("confidence", "medium")
+            else:
+                # Standard output - just category name
+                predicted_category = response.strip()
+                confidence = None
+
+                # Find matching category
+                for cat in categories:
+                    if cat["name"].lower() == predicted_category.lower():
+                        predicted_category = cat["name"]
+                        break
+
+            return {
+                "success": True,
+                "value": value,
+                "predicted_category": predicted_category,
+                "confidence": confidence if confidence else "medium",
+            }
+
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e),
+                "value": value,
+            }
+
     def classify_batch(
         self, values: List[str], categories: List[Dict], column_name: str
     ) -> List[Dict]:

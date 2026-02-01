@@ -3,10 +3,76 @@ import streamlit as st
 import pandas as pd
 from typing import List, Dict
 import time
+import logging
 from src.services import LLMService
 from src.data_ingestion import DataSampler
 from src.database.repositories import SessionRepository, ClassificationRepository
 from src.config import Config
+
+logger = logging.getLogger(__name__)
+
+
+def retry_classification_with_feedback(
+    df: pd.DataFrame,
+    column: str,
+    categories: List[Dict],
+    selected_indices: List[int],
+    feedback: str,
+    results: List[Dict]
+):
+    """
+    Retry classification for selected rows with user feedback
+
+    Args:
+        df: DataFrame with data
+        column: Column name
+        categories: List of categories
+        selected_indices: Indices of rows to reclassify
+        feedback: User feedback to add to prompt
+        results: Original results list to update
+    """
+    llm_service = LLMService()
+
+    # Reclassify selected rows
+    for idx in selected_indices:
+        value = results[idx]["value"]
+
+        # Classify with feedback
+        result = llm_service.classify_value_with_feedback(
+            value=value,
+            categories=categories,
+            column_name=column,
+            feedback=feedback
+        )
+
+        # Update results
+        if result["success"]:
+            results[idx]["predicted_category"] = result["predicted_category"]
+            results[idx]["confidence"] = result.get("confidence", "medium")
+
+            # Update database
+            if "db_session_id" in st.session_state:
+                try:
+                    # Find and update the classification record
+                    from src.database.connection import DatabaseConnection
+                    from src.database.models import Classification
+
+                    with DatabaseConnection.get_session() as db:
+                        classification = (
+                            db.query(Classification)
+                            .filter(
+                                Classification.session_id == st.session_state.db_session_id,
+                                Classification.input_text == value
+                            )
+                            .first()
+                        )
+
+                        if classification:
+                            classification.predicted_category = result["predicted_category"]
+                            classification.confidence = result.get("confidence", "medium")
+                            db.commit()
+                except Exception as e:
+                    logger.warning(f"Failed to update database: {e}")
 
 
 def render_classification_interface(
@@ -176,10 +242,66 @@ def render_classification_interface(
             )
             st.bar_chart(chart_df.set_index("Category"))
 
-        # Detailed results table
+        # Detailed results table with retry functionality
         with st.expander("🔍 Detailed Results"):
             results_df = pd.DataFrame(results)
-            st.dataframe(results_df, width="stretch")
+
+            # Add row selection for retry
+            st.subheader("Select rows to reclassify")
+
+            # Create editable dataframe with selection
+            edited_df = results_df.copy()
+            edited_df.insert(0, "Select", False)
+
+            # Display with checkboxes
+            col1, col2 = st.columns([3, 1])
+
+            with col1:
+                # Show data editor for selection
+                selected_results = st.data_editor(
+                    edited_df,
+                    disabled=["value", "predicted_category", "confidence", "success"],
+                    hide_index=True,
+                    use_container_width=True,
+                    key="results_selector"
+                )
+
+            with col2:
+                # Count selected rows
+                selected_count = selected_results["Select"].sum()
+                st.metric("Selected", selected_count)
+
+                # Feedback text area
+                retry_feedback = st.text_area(
+                    "Feedback for retry",
+                    placeholder="E.g., 'Be more specific about technical issues' or 'Consider the context of customer service'",
+                    height=100,
+                    help="This feedback will be added to the classification prompt"
+                )
+
+                # Retry button
+                if st.button(
+                    f"🔄 Retry {selected_count} Selected",
+                    disabled=selected_count == 0,
+                    type="primary",
+                    use_container_width=True
+                ):
+                    if selected_count > 0:
+                        # Get indices of selected rows
+                        selected_indices = selected_results[selected_results["Select"]].index.tolist()
+
+                        with st.spinner(f"Reclassifying {selected_count} rows..."):
+                            retry_classification_with_feedback(
+                                df=st.session_state.classification_df,
+                                column=column,
+                                categories=categories,
+                                selected_indices=selected_indices,
+                                feedback=retry_feedback,
+                                results=results
+                            )
+
+                        st.success(f"✓ Reclassified {selected_count} rows!")
+                        st.rerun()
 
         # Download results
         if st.button("💾 Download Results as CSV", width="stretch"):

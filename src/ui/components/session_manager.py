@@ -2,7 +2,7 @@
 import streamlit as st
 from typing import Optional
 from datetime import datetime
-from src.database.repositories import SessionRepository, UploadRepository
+from src.database.repositories import SessionRepository, UploadRepository, ClassificationRepository
 from src.storage import SupabaseStorage
 from src.data_ingestion import FileParser
 import logging
@@ -180,6 +180,42 @@ def load_session(session_id: str) -> bool:
             st.session_state.discovered_categories = session.categories
             st.session_state.categories_finalized = True
             st.session_state.category_column = session.selected_column
+
+        # Restore classifications from database
+        try:
+            classifications = ClassificationRepository.get_session_classifications(session_id)
+            if classifications:
+                logger.info(f"Loading {len(classifications)} classifications from database")
+
+                # Create results list
+                classification_results = []
+                for c in classifications:
+                    classification_results.append({
+                        "value": c.input_text,
+                        "predicted_category": c.predicted_category,
+                        "confidence": c.confidence or "medium",
+                        "success": c.success,
+                        "row_index": c.row_index
+                    })
+
+                # Store in session state
+                st.session_state.classification_results = classification_results
+                st.session_state.classification_complete = True
+
+                # Create classification dataframe for download
+                if session.selected_sheet and session.selected_column:
+                    try:
+                        df_for_classification = sheets.get(session.selected_sheet)
+                        if df_for_classification is not None:
+                            st.session_state.classification_df = df_for_classification
+                    except Exception:
+                        # If we can't get the dataframe, it's okay - will be available when they navigate to classification
+                        pass
+
+                logger.info(f"Restored {len(classifications)} classification results")
+        except Exception as e:
+            logger.warning(f"Could not load classifications: {e}")
+            # Continue anyway - session can still be used
 
         logger.info(f"Successfully loaded session {session_id}")
         return True
