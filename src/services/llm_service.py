@@ -12,12 +12,52 @@ logger = logging.getLogger(__name__)
 class LLMService:
     """Service for interacting with LLM via LiteLLM"""
 
-    def __init__(self):
-        """Initialize LLM service"""
-        self.model = Config.LLM_MODEL
+    def __init__(self, model: Optional[str] = None):
+        """
+        Initialize LLM service
+
+        Args:
+            model: Optional model override (uses Config.LLM_MODEL if not provided)
+        """
+        self.model = model or Config.LLM_MODEL
         self.temperature = Config.LLM_TEMPERATURE
         self.max_tokens = Config.LLM_MAX_TOKENS
         self.prompt_loader = PromptLoader()
+
+    def get_model(self) -> str:
+        """Get the current model being used"""
+        # Check if there's a selected model in session state (for Streamlit apps)
+        try:
+            import streamlit as st
+            if hasattr(st, 'session_state') and "selected_model" in st.session_state:
+                return st.session_state.selected_model
+        except (ImportError, RuntimeError):
+            # Not in Streamlit context or session_state not available
+            pass
+
+        return self.model
+
+    def get_temperature(self) -> float:
+        """Get the current temperature setting"""
+        try:
+            import streamlit as st
+            if hasattr(st, 'session_state') and "llm_temperature" in st.session_state:
+                return st.session_state.llm_temperature
+        except (ImportError, RuntimeError):
+            pass
+
+        return self.temperature
+
+    def get_max_tokens(self) -> int:
+        """Get the current max tokens setting"""
+        try:
+            import streamlit as st
+            if hasattr(st, 'session_state') and "llm_max_tokens" in st.session_state:
+                return st.session_state.llm_max_tokens
+        except (ImportError, RuntimeError):
+            pass
+
+        return self.max_tokens
 
     def _call_llm(
         self,
@@ -39,11 +79,16 @@ class LLMService:
             LLM response content
         """
         try:
+            # Get current settings (checks session state first, then falls back to defaults)
+            current_model = self.get_model()
+            current_temperature = temperature if temperature is not None else self.get_temperature()
+            current_max_tokens = max_tokens if max_tokens is not None else self.get_max_tokens()
+
             kwargs = {
-                "model": self.model,
+                "model": current_model,
                 "messages": messages,
-                "temperature": temperature or self.temperature,
-                "max_tokens": max_tokens or self.max_tokens,
+                "temperature": current_temperature,
+                "max_tokens": current_max_tokens,
                 "api_key": Config.OPENAI_API_KEY,
             }
 

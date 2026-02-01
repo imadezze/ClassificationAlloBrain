@@ -11,7 +11,7 @@ class Config:
 
     # OpenAI/LLM Configuration
     OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-    LLM_MODEL = os.getenv("LLM_MODEL", "gpt-4-turbo-preview")
+    LLM_MODEL = os.getenv("LLM_MODEL", "gpt-5.2-2025-12-11")
     LLM_TEMPERATURE = float(os.getenv("LLM_TEMPERATURE", "0.1"))
     LLM_MAX_TOKENS = int(os.getenv("LLM_MAX_TOKENS", "2000"))
 

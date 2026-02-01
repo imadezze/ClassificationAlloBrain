@@ -14,6 +14,7 @@ from src.ui.components import (
     render_session_loader,
     render_quick_load_button,
 )
+from src.ui.components.model_selector import render_model_selector
 
 
 def init_session_state():
@@ -74,9 +75,8 @@ def render_sidebar():
 
         st.markdown("---")
 
-        st.subheader("⚙️ Configuration")
-        st.code(f"Model: {Config.LLM_MODEL}")
-        st.code(f"Temperature: {Config.LLM_TEMPERATURE}")
+        # Model selector
+        render_model_selector(location="sidebar")
         st.code(f"Max Preview: {Config.MAX_PREVIEW_ROWS} rows")
 
         st.markdown("---")
