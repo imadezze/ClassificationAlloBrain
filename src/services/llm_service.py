@@ -266,8 +266,44 @@ class LLMService:
 
         return {"success": False, "error": "Max retries exceeded"}
 
+    def _get_classification_schema(self, category_names: List[str]) -> Dict:
+        """
+        Generate JSON schema for classification with strict enum constraint
+
+        Args:
+            category_names: List of exact category names to choose from
+
+        Returns:
+            JSON schema dictionary with strict enum enforcement
+        """
+        return {
+            "type": "json_schema",
+            "json_schema": {
+                "name": "classification_result",
+                "strict": True,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "category": {
+                            "type": "string",
+                            "enum": category_names,
+                            "description": "The selected category - MUST be exactly one of the provided enum values"
+                        },
+                        "confidence": {
+                            "type": "string",
+                            "enum": ["high", "medium", "low"],
+                            "description": "Confidence level of the classification"
+                        }
+                    },
+                    "required": ["category", "confidence"],
+                    "additionalProperties": False
+                }
+            }
+        }
+
     def classify_value(
-        self, value: str, categories: List[Dict], column_name: str
+        self, value: str, categories: List[Dict], column_name: str,
+        use_structured_output: bool = True
     ) -> Dict:
         """
         Classify a single value into one of the provided categories
@@ -276,10 +312,14 @@ class LLMService:
             value: Value to classify
             categories: List of category definitions
             column_name: Name of the column
+            use_structured_output: Use structured outputs with enum constraint (default: True)
 
         Returns:
             Dictionary with classification result
         """
+        # Extract category names for enum constraint
+        category_names = [cat["name"] for cat in categories]
+
         # Format categories list
         categories_text = self._format_categories_list(categories)
 
@@ -294,32 +334,55 @@ class LLMService:
         )
 
         try:
+            # Use structured outputs if enabled and using GPT model
+            response_format = None
+            if use_structured_output and self.model.startswith("gpt"):
+                response_format = self._get_classification_schema(category_names)
+                logger.debug(f"Using structured outputs with {len(category_names)} category enum")
+
             response = self._call_llm(
                 prompt_data["messages"],
                 temperature=prompt_data["parameters"].get("temperature"),
                 max_tokens=prompt_data["parameters"].get("max_tokens"),
+                response_format=response_format
             )
-            predicted_category = response.strip()
 
-            # Find matching category
-            matched_category = None
-            for cat in categories:
-                if cat["name"].lower() == predicted_category.lower():
-                    matched_category = cat["name"]
-                    break
+            # Parse response based on whether structured outputs were used
+            if response_format:
+                # Structured output returns JSON
+                if isinstance(response, str):
+                    result = json.loads(response)
+                else:
+                    result = response
 
-            if not matched_category:
-                # Try partial match
+                predicted_category = result.get("category")
+                confidence = result.get("confidence", "medium")
+            else:
+                # Standard output - just category name
+                predicted_category = response.strip()
+                confidence = None
+
+                # Find matching category (fallback for non-structured mode)
+                matched_category = None
                 for cat in categories:
-                    if cat["name"].lower() in predicted_category.lower():
+                    if cat["name"].lower() == predicted_category.lower():
                         matched_category = cat["name"]
                         break
+
+                if not matched_category:
+                    # Try partial match
+                    for cat in categories:
+                        if cat["name"].lower() in predicted_category.lower():
+                            matched_category = cat["name"]
+                            break
+
+                predicted_category = matched_category or predicted_category
 
             return {
                 "success": True,
                 "value": value,
-                "predicted_category": matched_category or predicted_category,
-                "confidence": "high" if matched_category else "low",
+                "predicted_category": predicted_category,
+                "confidence": confidence if confidence else ("high" if predicted_category in category_names else "low"),
             }
 
         except Exception as e:

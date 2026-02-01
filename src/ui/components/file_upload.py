@@ -19,6 +19,29 @@ def render_file_upload() -> Optional[dict]:
     """
     st.header("📁 File Upload")
 
+    # Check if session was loaded (has data but no uploaded file)
+    if ("sheets" in st.session_state and
+        "file_info" in st.session_state and
+        "file_name" in st.session_state):
+        # Display loaded session info
+        st.success(f"✓ Session loaded: {st.session_state.file_name}")
+
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("File Size", f"{st.session_state.file_size / 1024:.1f} KB")
+        with col2:
+            st.metric("Sheets", st.session_state.file_info["num_sheets"])
+        with col3:
+            st.metric("Total Rows", st.session_state.file_info["total_rows"])
+
+        # Return the loaded data
+        return {
+            "name": st.session_state.file_name,
+            "size": st.session_state.file_size,
+            "sheets": st.session_state.sheets,
+            "info": st.session_state.file_info,
+        }
+
     uploaded_file = st.file_uploader(
         "Upload your data file",
         type=["csv", "xlsx", "xls"],
@@ -116,17 +139,21 @@ def render_file_upload() -> Optional[dict]:
                         st.warning(f"⚠️ File uploaded but not saved to storage: {str(e)}")
                         logger.warning(f"Storage upload failed: {str(e)}")
 
-                    # Check for duplicate upload
-                    existing_upload = UploadRepository.find_by_hash(file_hash)
-                    if not existing_upload:
+                    # Create upload record (always create even if same file content)
+                    try:
+                        # Always create a new upload record for this session
+                        # Note: We don't use find_by_hash because multiple sessions
+                        # can upload the same file
                         upload = UploadRepository.create_upload(**upload_data)
                         st.session_state.db_upload_id = str(upload.id)
+                        logger.info(f"Created upload record: {upload.id}")
 
                         # Mark as processed
-                        UploadRepository.update_upload_status(upload.id, "processed")
-                    else:
-                        st.session_state.db_upload_id = str(existing_upload.id)
-                        st.info("💡 This file was previously uploaded")
+                        UploadRepository.update_upload_status(str(upload.id), "processed")
+                    except Exception as upload_error:
+                        logger.error(f"Failed to create upload record: {str(upload_error)}")
+                        st.error(f"Failed to save upload record: {str(upload_error)}")
+                        # Continue anyway - file is uploaded and session exists
 
                     # Reset downstream state
                     if "selected_sheet" in st.session_state:

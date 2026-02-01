@@ -37,6 +37,10 @@ def render_session_loader() -> bool:
             status = session.status or "unknown"
             filename = session.original_filename or "Unnamed"
 
+            # Check if file exists in storage
+            upload = UploadRepository.get_by_session(str(session.id))
+            has_file = upload and upload.stored_filename
+
             # Get classification count if available
             from src.database.repositories import ClassificationRepository
             stats = ClassificationRepository.get_statistics(str(session.id))
@@ -51,13 +55,16 @@ def render_session_loader() -> bool:
                 "columns": session.total_columns or 0,
                 "categories": session.num_categories or 0,
                 "classifications": classification_count,
+                "has_file": has_file,
             }
             session_options.append(session_info)
 
         # Display as expandable items
         for i, session_info in enumerate(session_options):
+            # Add indicator for file availability
+            file_indicator = "✅" if session_info["has_file"] else "⚠️"
             with st.expander(
-                f"🗂️ {session_info['filename']} - {session_info['created']}"
+                f"{file_indicator} {session_info['filename']} - {session_info['created']}"
             ):
                 col1, col2, col3 = st.columns(3)
 
@@ -72,17 +79,21 @@ def render_session_loader() -> bool:
                 with col3:
                     st.metric("Classified", session_info["classifications"])
 
-                # Load button
-                if st.button(
-                    "📥 Load This Session",
-                    key=f"load_session_{i}",
-                    use_container_width=True,
-                ):
-                    if load_session(session_info["id"]):
-                        st.success("Session loaded successfully!")
-                        st.rerun()
-                    else:
-                        st.error("Failed to load session")
+                # Show file availability
+                if not session_info["has_file"]:
+                    st.warning("⚠️ File not available in storage - cannot load")
+                else:
+                    # Load button
+                    if st.button(
+                        "📥 Load This Session",
+                        key=f"load_session_{i}",
+                        use_container_width=True,
+                    ):
+                        if load_session(session_info["id"]):
+                            st.success("Session loaded successfully!")
+                            st.rerun()
+                        else:
+                            st.error("Failed to load session")
 
         return False
 
@@ -106,15 +117,21 @@ def load_session(session_id: str) -> bool:
         # Get session from database
         session = SessionRepository.get_session(session_id)
         if not session:
-            st.error("Session not found")
+            st.error("Session not found in database")
             return False
 
         # Get upload info
         from src.database.repositories import UploadRepository
         upload = UploadRepository.get_by_session(session_id)
 
-        if not upload or not upload.stored_filename:
-            st.error("File not found in storage")
+        if not upload:
+            st.error("No upload record found for this session")
+            logger.warning(f"No upload found for session {session_id}")
+            return False
+
+        if not upload.stored_filename:
+            st.error("File path not stored in database. File may not have been uploaded to storage.")
+            logger.warning(f"stored_filename is empty for session {session_id}")
             return False
 
         # Download file from storage
@@ -122,12 +139,20 @@ def load_session(session_id: str) -> bool:
             # Extract session_id and filename from stored path
             file_path_parts = upload.stored_filename.split("/")
             if len(file_path_parts) != 2:
-                st.error("Invalid file path format")
+                st.error(f"Invalid file path format: {upload.stored_filename}")
+                logger.error(f"Invalid stored_filename format: {upload.stored_filename}")
                 return False
 
             storage_session_id, filename = file_path_parts
 
-            file_bytes = SupabaseStorage.download_file(storage_session_id, filename)
+            logger.info(f"Downloading file from storage: {storage_session_id}/{filename}")
+
+            try:
+                file_bytes = SupabaseStorage.download_file(storage_session_id, filename)
+            except Exception as storage_error:
+                st.error(f"Failed to download file from storage: {str(storage_error)}")
+                logger.error(f"Storage download error: {str(storage_error)}")
+                return False
 
         # Parse file
         with st.spinner("Parsing file..."):
@@ -176,6 +201,15 @@ def render_quick_load_button() -> bool:
         latest = SessionRepository.get_latest_session()
 
         if not latest:
+            st.caption("No previous sessions")
+            return False
+
+        # Check if this session has a file in storage
+        from src.database.repositories import UploadRepository
+        upload = UploadRepository.get_by_session(str(latest.id))
+
+        if not upload or not upload.stored_filename:
+            st.caption("No previous sessions with files")
             return False
 
         # Show in sidebar or main area
@@ -196,4 +230,5 @@ def render_quick_load_button() -> bool:
 
     except Exception as e:
         logger.error(f"Error in quick load: {str(e)}")
+        st.caption("Error loading sessions")
         return False

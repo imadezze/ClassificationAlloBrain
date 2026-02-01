@@ -122,7 +122,13 @@ def main():
     file_data = render_file_upload()
 
     if not file_data:
+        # Show option to load previous sessions
         st.info("👆 Upload a file to get started")
+
+        # Add session loader as expandable section
+        with st.expander("📂 Or load a previous session"):
+            render_session_loader()
+
         return
 
     st.markdown("---")

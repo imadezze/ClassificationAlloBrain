@@ -94,6 +94,7 @@ class Upload(Base):
 
     # File details
     original_filename = Column(String(255), nullable=False)
+    stored_filename = Column(String(512), nullable=True, comment="Path in Supabase Storage (session_id/filename)")
     file_type = Column(String(20), nullable=False, comment="csv | excel")
     file_size_bytes = Column(BigInteger, nullable=False)
     file_hash = Column(String(64), nullable=True, comment="MD5 hash for deduplication")
