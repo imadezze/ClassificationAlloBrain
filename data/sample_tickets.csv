@@ -1,0 +1,16 @@
+Ticket ID,Ticket Type,Ticket Subject,Ticket Description
+1,Technical issue,Product setup,I'm having trouble setting up my new device. The manual is unclear.
+2,Billing inquiry,Refund request,I was charged twice for my subscription. Please refund the duplicate charge.
+3,Technical issue,Software bug,The app crashes every time I try to upload a photo.
+4,Product inquiry,Feature question,Does this product support wireless charging?
+5,Cancellation,Cancel subscription,I would like to cancel my subscription effective immediately.
+6,Technical issue,Login problem,I can't log in to my account. Password reset isn't working.
+7,Shipping,Delivery delay,My order hasn't arrived yet. It's been 2 weeks since I placed it.
+8,Technical issue,Performance issue,The device is running very slowly and freezing frequently.
+9,Product inquiry,Compatibility check,Is this product compatible with iPhone 15?
+10,Billing inquiry,Invoice request,I need an invoice for my recent purchase for accounting purposes.
+11,Technical issue,Connection issue,Unable to connect to WiFi. Tried all troubleshooting steps.
+12,Complaint,Damaged product,The product arrived damaged. Box was clearly mishandled.
+13,Feature request,New feature suggestion,Would be great if you added dark mode to the app.
+14,Technical issue,Update failed,Software update failed halfway through. Device won't turn on now.
+15,Account issue,Password reset,Need to reset my password but not receiving the reset email.

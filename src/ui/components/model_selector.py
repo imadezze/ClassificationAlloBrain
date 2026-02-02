@@ -9,44 +9,103 @@ logger = logging.getLogger(__name__)
 
 # Latest models by provider (from LiteLLM docs - Feb 2026)
 ANTHROPIC_MODELS = {
-    # Claude 4.5 Series (Latest)
+    # Claude 4.5 Series (Latest) - Bedrock Global
+    "bedrock/global.anthropic.claude-opus-4-5-20251101-v1:0": {
+        "name": "Claude Opus 4.5 (Bedrock Global)",
+        "description": "Most capable via AWS global routing",
+        "released": "Nov 2025",
+        "provider": "AWS Bedrock Global"
+    },
+    "bedrock/anthropic.claude-opus-4-5-20251101-v1:0": {
+        "name": "Claude Opus 4.5 (Bedrock)",
+        "description": "Most capable via AWS regional",
+        "released": "Nov 2025",
+        "provider": "AWS Bedrock"
+    },
+    "bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0": {
+        "name": "Claude Sonnet 4.5 (Bedrock)",
+        "description": "Latest via AWS - great for coding",
+        "released": "Sep 2025",
+        "provider": "AWS Bedrock"
+    },
+    # Claude 4.5 Series - Direct
     "claude-opus-4-5-20251101": {
         "name": "Claude Opus 4.5",
-        "description": "Most capable model - best for complex tasks",
-        "released": "Nov 2025"
+        "description": "Most capable - direct API",
+        "released": "Nov 2025",
+        "provider": "Anthropic Direct"
     },
     "claude-sonnet-4-5-20250929": {
         "name": "Claude Sonnet 4.5",
-        "description": "Balanced performance - great for coding",
-        "released": "Sep 2025"
+        "description": "Balanced - direct API",
+        "released": "Sep 2025",
+        "provider": "Anthropic Direct"
     },
-    # Claude 3.7
+    # Claude 3.7 - Bedrock
+    "bedrock/us.anthropic.claude-3-7-sonnet-20250219-v1:0": {
+        "name": "Claude 3.7 Sonnet (Bedrock)",
+        "description": "Enhanced 3.x via AWS",
+        "released": "Feb 2025",
+        "provider": "AWS Bedrock"
+    },
+    # Claude 3.7 - Direct
     "claude-3-7-sonnet-20250219": {
         "name": "Claude 3.7 Sonnet",
-        "description": "Enhanced 3.x model",
-        "released": "Feb 2025"
+        "description": "Enhanced 3.x - direct API",
+        "released": "Feb 2025",
+        "provider": "Anthropic Direct"
     },
-    # Claude 3.5
+    # Claude 3.5 - Bedrock
+    "bedrock/anthropic.claude-3-5-sonnet-20240620-v1:0": {
+        "name": "Claude 3.5 Sonnet (Bedrock)",
+        "description": "Previous flagship via AWS",
+        "released": "Jun 2024",
+        "provider": "AWS Bedrock"
+    },
+    # Claude 3.5 - Direct
     "claude-3-5-sonnet-20240620": {
         "name": "Claude 3.5 Sonnet",
-        "description": "Previous generation flagship",
-        "released": "Jun 2024"
+        "description": "Previous flagship - direct API",
+        "released": "Jun 2024",
+        "provider": "Anthropic Direct"
     },
-    # Claude 3 Base
+    # Claude 3 Base - Bedrock
+    "bedrock/anthropic.claude-3-opus-20240229-v1:0": {
+        "name": "Claude 3 Opus (Bedrock)",
+        "description": "Most capable Claude 3 via AWS",
+        "released": "Feb 2024",
+        "provider": "AWS Bedrock"
+    },
+    "bedrock/anthropic.claude-3-sonnet-20240229-v1:0": {
+        "name": "Claude 3 Sonnet (Bedrock)",
+        "description": "Balanced Claude 3 via AWS",
+        "released": "Feb 2024",
+        "provider": "AWS Bedrock"
+    },
+    "bedrock/anthropic.claude-3-haiku-20240307-v1:0": {
+        "name": "Claude 3 Haiku (Bedrock)",
+        "description": "Fastest Claude 3 via AWS",
+        "released": "Mar 2024",
+        "provider": "AWS Bedrock"
+    },
+    # Claude 3 Base - Direct
     "claude-3-opus-20240229": {
         "name": "Claude 3 Opus",
-        "description": "Original Claude 3 - most capable",
-        "released": "Feb 2024"
+        "description": "Most capable - direct API",
+        "released": "Feb 2024",
+        "provider": "Anthropic Direct"
     },
     "claude-3-sonnet-20240229": {
         "name": "Claude 3 Sonnet",
-        "description": "Balanced Claude 3",
-        "released": "Feb 2024"
+        "description": "Balanced - direct API",
+        "released": "Feb 2024",
+        "provider": "Anthropic Direct"
     },
     "claude-3-haiku-20240307": {
         "name": "Claude 3 Haiku",
-        "description": "Fastest Claude 3",
-        "released": "Mar 2024"
+        "description": "Fastest - direct API",
+        "released": "Mar 2024",
+        "provider": "Anthropic Direct"
     },
 }
 

@@ -72,4 +72,6 @@ frontend/.env.local
 
 other/
 
-data/
+# data/
+# data_bis
+docs_bis/

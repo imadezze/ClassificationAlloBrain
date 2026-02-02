@@ -11,6 +11,7 @@ from src.ui.components import (
     render_column_selector,
     render_category_discovery,
     render_classification_interface,
+    render_evaluation_interface,
     render_session_loader,
     render_quick_load_button,
 )
@@ -55,6 +56,7 @@ def render_sidebar():
             "4️⃣ Select Column",
             "5️⃣ Discover Categories",
             "6️⃣ Classify Data",
+            "7️⃣ Evaluate Quality",
         ]
 
         for step in steps:
@@ -173,6 +175,18 @@ def main():
 
     # Step 6: Classification
     render_classification_interface(df, selected_column, categories)
+
+    # Step 7: Evaluation (only if classification completed)
+    if st.session_state.get("classification_complete", False):
+        st.markdown("---")
+
+        # Evaluation Interface
+        render_evaluation_interface(
+            df=df,
+            column=selected_column,
+            categories=categories,
+            classification_results=st.session_state.get("classification_results", [])
+        )
 
 
 if __name__ == "__main__":
