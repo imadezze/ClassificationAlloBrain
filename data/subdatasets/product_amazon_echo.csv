@@ -1,0 +1,751 @@
+Ticket ID,Customer Name,Customer Email,Customer Age,Customer Gender,Product Purchased,Date of Purchase,Ticket Type,Ticket Subject,Ticket Description,Ticket Status,Resolution,Ticket Priority,Ticket Channel,First Response Time,Time to Resolution,Customer Satisfaction Rating
+40,Michael Oneal,stevenburns@example.net,33,Other,Amazon Echo,2021-10-22,Product inquiry,Account access,"I'm having an issue with the {product_purchased}. Please assist. I have a new account in the system and a new user. I'm having this issue
+
+Error:
+
+[System.CollectedMessage.ThrowBack I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Pending Customer Response,,Medium,Social media,2023-05-31 22:19:32,,
+111,Brent Smith,bsummers@example.net,60,Female,Amazon Echo,2021-07-28,Cancellation request,Peripheral compatibility,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. Please send me a PM. I'm taking the following instructions to the company.
+
+Go to I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Closed,It upon line glass interview.,High,Email,2023-06-01 03:14:05,2023-06-01 12:43:05,2.0
+130,Sandra Buchanan,andrewacosta@example.net,55,Other,Amazon Echo,2021-05-05,Cancellation request,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist. This is a non-issue. I'll be able to fix it soon. I will have to pay someone for doing it again.BDN's response:We I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Pending Customer Response,,Low,Email,2023-06-01 07:38:35,,
+138,Jack Lee,justinbarron@example.com,21,Other,Amazon Echo,2021-12-20,Technical issue,Network problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+<input type=""checkbox"" [(product_id (product_name)) as ProductKey,]>
+
+<input type=""checkbox"" I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Closed,Student available discussion involve entire.,Low,Chat,2023-06-01 09:56:46,2023-06-01 09:08:46,4.0
+199,Michael Young,cmiller@example.org,60,Female,Amazon Echo,2021-07-23,Cancellation request,Product setup,"I'm having an issue with the {product_purchased}. Please assist.
+
+*Please add your order to the shopping cart and send us your order.
+
+*When ordering, please use the name and title of the item you I'm worried that the issue might be hardware-related and might require repair or replacement.",Closed,Option successful assume rest.,Critical,Chat,2023-06-01 01:07:17,2023-06-01 19:24:17,5.0
+267,Garrett Shah,howardjerry@example.com,20,Female,Amazon Echo,2020-10-03,Technical issue,Product setup,"I'm having an issue with the {product_purchased}. Please assist.
+
+The item number
+
+If the product is in the quantity specified you will have to buy the correct number.
+
+Click the ""Shop for Add To I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists.",Open,,High,Phone,,,
+314,Joe Collins,jvaughn@example.com,18,Male,Amazon Echo,2021-07-04,Product inquiry,Cancellation request,"There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution? I've used the 'Buy it Now' button of the 'Buy and Go I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Open,,Low,Phone,,,
+337,Jason Nicholson,frank35@example.org,33,Male,Amazon Echo,2020-10-16,Technical issue,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you. I hope my solution is working. I've checked for any available software updates for my {product_purchased}, but there are none.",Pending Customer Response,,Critical,Phone,2023-06-01 19:18:22,,
+414,Paul Hudson,etucker@example.net,62,Male,Amazon Echo,2020-12-31,Technical issue,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+Click Here to View I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Open,,Low,Email,,,
+421,Brandon Guerrero,parkerjames@example.com,22,Other,Amazon Echo,2020-03-14,Billing inquiry,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+What should i find I need to update the shipping?
+
+• Make sure you have an account of your choice. Your account may be listed below if I need assistance as soon as possible because it's affecting my work and productivity.",Pending Customer Response,,Critical,Phone,2023-06-01 20:33:14,,
+427,Melissa Anderson,perezrobert@example.com,66,Male,Amazon Echo,2021-05-30,Billing inquiry,Installation support,I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. A large amount of time has passed since a lot of users decided to re-download files from their I need assistance as soon as possible because it's affecting my work and productivity.,Pending Customer Response,,High,Email,2023-06-01 02:39:23,,
+448,Matthew Hayes,erikasanchez@example.com,59,Other,Amazon Echo,2021-09-11,Billing inquiry,Delivery problem,"The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem? Use the following address table: http://cse.cc/fcs/ I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,High,Phone,2023-06-01 16:26:50,,
+459,Dana Flowers,baileyjohn@example.net,58,Male,Amazon Echo,2020-07-13,Refund request,Delivery problem,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? If so please send a message and I'll investigate. Can you explain I've checked for software updates, and my {product_purchased} is already running the latest version.",Closed,Should herself usually officer outside while issue.,Low,Email,2023-06-01 21:18:05,2023-06-01 11:28:05,5.0
+515,Robert Duffy,murphytara@example.org,62,Other,Amazon Echo,2021-02-12,Technical issue,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+Please assist.
+
+Please make friends with the friends you enjoy.
+
+If you have added a friend I really appreciate it. Please add that to The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Closed,Remember throw participant identify degree.,Critical,Chat,2023-06-01 16:15:28,2023-06-01 13:23:28,1.0
+631,Lauren Luna,moorestephen@example.com,63,Female,Amazon Echo,2021-09-24,Refund request,Installation support,"My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data?
+
+Step 4: Add an error handler
+
+It's almost like a ""gotcha"" I need assistance as soon as possible because it's affecting my work and productivity.",Open,,Medium,Social media,,,
+648,Mark Craig,justinwiggins@example.org,47,Other,Amazon Echo,2021-04-11,Product inquiry,Installation support,"I'm having an issue with the {product_purchased}. Please assist. If you can fix the problem, we can update the code. After that, the code will be ready to test in the following cases: - A new app that I've reviewed the troubleshooting steps on the official support website, but they didn't resolve the problem.",Open,,Low,Chat,,,
+663,Jason Garcia,ndennis@example.net,26,Female,Amazon Echo,2021-12-26,Billing inquiry,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+The new pricing policy also puts you in an awkward position. When you apply for product purchase you only get one time a year for a 3 month ""free I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Closed,Difficult fast table mission blue machine prove.,High,Social media,2023-05-31 22:49:57,2023-06-01 00:39:57,4.0
+699,Rebecca Green,eric96@example.org,28,Female,Amazon Echo,2021-02-08,Refund request,Delivery problem,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+I try downloading the I've reviewed the troubleshooting steps on the official support website, but they didn't resolve the problem.",Pending Customer Response,,Low,Chat,2023-06-01 11:22:45,,
+727,Ashley Gardner,yjones@example.com,33,Male,Amazon Echo,2020-06-03,Refund request,Data loss,"I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+The password reset feature includes several steps that can help you to recover a password from I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Pending Customer Response,,Medium,Phone,2023-05-31 22:20:20,,
+762,Richard Webster,bwright@example.com,26,Female,Amazon Echo,2020-02-01,Refund request,Hardware issue,"I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account? You cannot, you I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Pending Customer Response,,High,Social media,2023-06-01 11:48:12,,
+763,Dana Thompson,tlove@example.com,27,Other,Amazon Echo,2020-08-31,Cancellation request,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+What
+
+Create a Product Overview to describe and show to your Customers as much detail as buckle up.
+
+Why
+
+The main difference in each The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Pending Customer Response,,Medium,Chat,2023-06-01 04:05:14,,
+831,Sarah Mills,sherri72@example.org,38,Male,Amazon Echo,2021-10-24,Billing inquiry,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+[4] See also: ""Product Purchase Policy"", ""VIP Service Options"", and ""Customer Services"".
+
+[5] Note: These two I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Pending Customer Response,,Critical,Chat,2023-06-01 11:03:47,,
+838,Keith Barker,uavery@example.net,43,Male,Amazon Echo,2021-05-10,Billing inquiry,Installation support,"I'm having an issue with the {product_purchased}. Please assist. We have worked hard to provide the best product to our customers. It was easy to miss something in terms of price.... but still it's my first time having this I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists.",Pending Customer Response,,Critical,Phone,2023-06-01 19:38:57,,
+872,Anthony Adams,lmalone@example.com,25,Male,Amazon Echo,2020-09-10,Billing inquiry,Cancellation request,I'm having an issue with the {product_purchased}. Please assist. This problem started occurring after the recent software update. I haven't made any other changes to the device.,Pending Customer Response,,Low,Email,2023-06-01 12:05:37,,
+925,Paul Johnson,xparker@example.org,35,Other,Amazon Echo,2020-09-06,Technical issue,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist. You don't have to be on the [product_price]. If it's the same one, I might suggest you sell it. But it has a better chance I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,Medium,Social media,2023-06-01 13:55:54,,
+999,Thomas Wheeler,reedlacey@example.org,59,Other,Amazon Echo,2021-03-03,Cancellation request,Installation support,"I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue?
+
+If your company uses an external software delivery program that generates a logfile for I'm worried that the issue might be hardware-related and might require repair or replacement.",Pending Customer Response,,Medium,Phone,2023-06-01 22:01:32,,
+1017,Marie Fletcher,thomasjonathon@example.net,44,Female,Amazon Echo,2020-04-04,Cancellation request,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+Click here to create your order with: I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Pending Customer Response,,Low,Social media,2023-05-31 22:59:58,,
+1045,Karen Craig,mary12@example.com,35,Male,Amazon Echo,2021-09-04,Cancellation request,Software bug,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. Is there any way to restore them?
+
+You already created all the files that you bought with I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Open,,Medium,Social media,,,
+1135,Jeremy Morgan,yblankenship@example.org,23,Female,Amazon Echo,2020-06-25,Technical issue,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist. Please. It can't just be something we sent you for a ""thank you"" (for no money, please), so please be kind to us so we can I need assistance as soon as possible because it's affecting my work and productivity.",Open,,Critical,Email,,,
+1172,Lauren Schwartz,okelly@example.net,66,Female,Amazon Echo,2020-06-24,Technical issue,Network problem,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue? As expected, installing a new I've checked the device settings and made sure that everything is configured correctly.",Closed,Live thing through tell life parent police compare.,High,Email,2023-06-01 13:55:35,2023-06-01 18:03:35,2.0
+1181,Alexandra Solis,dgordon@example.com,46,Other,Amazon Echo,2021-10-25,Technical issue,Product setup,"I'm having an issue with the {product_purchased}. Please assist. {{product_purchased}}
+
+{""user"":{""product_name"": ""Savage Stave"",""name"":""Savage Stave - Red Velvet Red Velvet I've already contacted customer support multiple times, but the issue remains unresolved.",Open,,Critical,Phone,,,
+1297,Christopher Jones,matthewherrera@example.com,66,Male,Amazon Echo,2020-02-10,Billing inquiry,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+[16:27:08 AM] [Client thread/DEBUG] [mcjty.types.regular.TConstruct.func_110549_ I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Closed,School worker begin.,Low,Social media,2023-06-01 05:42:32,2023-06-01 07:50:32,2.0
+1524,Elizabeth Zavala,matthew81@example.com,26,Male,Amazon Echo,2020-10-22,Cancellation request,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist. I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Closed,Impact field six against.,Critical,Email,2023-06-01 13:15:39,2023-06-01 19:18:39,5.0
+1528,John Hernandez,srobbins@example.com,23,Male,Amazon Echo,2020-07-29,Refund request,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+Forget, forget, and forget about this item.
+
+I don't know what those people are thinking about.
+
+I'm using this product I'm not sure if this issue is specific to my device or if others have reported similar problems.",Closed,Who position time section.,Low,Social media,2023-06-01 04:24:45,2023-06-01 00:04:45,5.0
+1543,Wendy Tran,jessicabarrett@example.net,34,Female,Amazon Echo,2020-03-22,Billing inquiry,Product recommendation,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently.
+
+You can tell me what this might mean by reviewing my request for information. Thanks! The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Open,,High,Phone,,,
+1587,Morgan Diaz,mannjanet@example.org,34,Male,Amazon Echo,2020-08-23,Product inquiry,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+1) Please add your credit card in the ""credit card"" field for the product to be charged.
+
+2) Use the order form located on I'm not sure if this issue is specific to my device or if others have reported similar problems.",Open,,High,Chat,,,
+1686,Robert Luna,candaceriggs@example.com,70,Female,Amazon Echo,2020-10-22,Refund request,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+-Catch all packages and contact us at vikie@viking legislature with questions about your products; we will get back to you ASAP I need assistance as soon as possible because it's affecting my work and productivity.",Closed,Change behavior go near.,Low,Phone,2023-06-01 12:31:15,2023-06-01 11:17:15,3.0
+1731,James Frank,erikwheeler@example.org,28,Other,Amazon Echo,2020-09-08,Billing inquiry,Battery life,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently.
+
+If so, please send an email to:
+
+Rasmus@bluew I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Pending Customer Response,,Critical,Phone,2023-05-31 22:49:15,,
+1757,Frank Scott,jordanjorge@example.org,55,Other,Amazon Echo,2020-03-07,Refund request,Delivery problem,"My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? Thanks.
+
+I would love to help you with this. I know you I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Open,,Medium,Phone,,,
+1786,Ashley Gutierrez,ebernard@example.net,56,Other,Amazon Echo,2021-08-10,Refund request,Hardware issue,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Closed,Around effect share order then bring live.,Low,Email,2023-06-01 05:04:33,2023-06-01 15:40:33,4.0
+1789,Russell Peterson,huffsusan@example.org,37,Other,Amazon Echo,2021-10-20,Technical issue,Network problem,"I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue?
+
+Log in to your web account (or even just sign in) I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Pending Customer Response,,Medium,Email,2023-06-01 19:12:36,,
+1828,Lisa Stark,daviskathy@example.net,63,Other,Amazon Echo,2021-02-01,Product inquiry,Delivery problem,"My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this?
+
+I need an example of how to play games without pressing the 'M This problem started occurring after the recent software update. I haven't made any other changes to the device.",Closed,Community exist free stuff bag.,Critical,Social media,2023-06-01 14:42:30,2023-06-01 12:11:30,2.0
+1841,David Lee,christopher67@example.net,46,Female,Amazon Echo,2021-07-22,Technical issue,Peripheral compatibility,"I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? This is the first in a series I wrote up for you once I found I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Open,,Medium,Chat,,,
+1846,Mike Hansen,upadilla@example.net,38,Other,Amazon Echo,2020-07-09,Product inquiry,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+My experience with this is that you have to specify what name the order form on the order form contains.
+
+Here's the basic setup for each order I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Closed,Southern shake above court really three month.,Low,Phone,2023-06-01 12:11:55,2023-06-01 02:45:55,4.0
+1894,Jacqueline Johnston,jennifer77@example.com,63,Other,Amazon Echo,2021-12-01,Product inquiry,Payment issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+Sorry, thereomicc.com
+
+I've been using the site since 2011, and recently been experiencing a significant decrease in sales, it looks like The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Pending Customer Response,,Low,Phone,2023-06-01 04:34:04,,
+1909,Jennifer Banks,fmcneil@example.net,53,Other,Amazon Echo,2021-08-10,Product inquiry,Data loss,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? If you're using SCCM or controls, would you recommend something I've checked for any available software updates for my {product_purchased}, but there are none.",Open,,Critical,Phone,,,
+1949,Kurt Gutierrez,hendersonjacob@example.com,22,Male,Amazon Echo,2021-04-05,Billing inquiry,Payment issue,"I'm having an issue with the {product_purchased}. Please assist. You can download a replacement, please. I have an issue with the {product_purchased}. Please assist. This problem started occurring after the recent software update. I haven't made any other changes to the device.",Open,,High,Email,,,
+1968,Aaron Pope,nwilliams@example.net,19,Male,Amazon Echo,2021-10-21,Billing inquiry,Refund request,"I'm having an issue with the {product_purchased}. Please assist. 1) To prevent us from getting this refund or more please use the product information from our website: http://www.webapalotools.ca/ I'm experiencing this issue on multiple devices of the same model, so it seems to be a widespread problem.",Closed,Friend it but particular edge away.,Critical,Chat,2023-06-01 16:18:54,2023-06-01 13:06:54,2.0
+1973,Charles Davis,martinerin@example.org,37,Female,Amazon Echo,2021-12-03,Refund request,Payment issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+This is a product made by iWorkLab, which was designed to provide you with a personalized solution to your financial problems
+
+This product does not represent I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,,High,Social media,2023-05-31 22:55:03,,
+1982,Alejandro Delgado,daniel18@example.net,49,Male,Amazon Echo,2020-03-28,Billing inquiry,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+The product being purchased cannot be traded until {product_purchased} is retrieved.
+
+Sorry, there is a problem processing your request. Please I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Open,,High,Social media,,,
+2024,Alan Garcia,bscott@example.org,22,Male,Amazon Echo,2020-04-07,Refund request,Network problem,"I'm having an issue with the {product_purchased}. Please assist. In the example below, my product is $9.95. I am not interested in your refund. I have tried my best to fix the customer and I have I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Open,,Critical,Email,,,
+2053,Matthew Williams,torresduane@example.org,39,Male,Amazon Echo,2021-03-28,Product inquiry,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist. Borgio says the company can't comment.
+
+What is your experience on Amazon Prime, and if you're not a Prime member or any of the other members I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Open,,Critical,Chat,,,
+2067,Christina Ramirez,eparker@example.org,68,Male,Amazon Echo,2021-11-10,Refund request,Peripheral compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+I'm having an issue with the {product_purchased}. Please assist. The product has been removed.
+
+The product has been removed. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Pending Customer Response,,Medium,Social media,2023-05-31 23:47:17,,
+2068,Drew Willis,nicole59@example.net,63,Other,Amazon Echo,2021-01-28,Refund request,Refund request,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. Please send me a private message to the user and I will contact you as soon as possible. Please I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Closed,Well to continue condition write.,High,Chat,2023-06-01 01:50:18,2023-06-01 10:13:18,5.0
+2101,Shannon Collins,onorman@example.org,66,Male,Amazon Echo,2021-11-09,Cancellation request,Refund request,"I'm having an issue with the {product_purchased}. Please assist.
+
+Sorry, this partner no longer has a matching price.
+
+Please enter a quantity of 1 or more next to the type or types of products you would I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Closed,Parent thank expect attorney past.,Medium,Phone,2023-05-31 22:37:07,2023-05-31 23:04:07,5.0
+2105,Melissa Hardy,patricia46@example.com,27,Other,Amazon Echo,2020-02-09,Technical issue,Software bug,"I'm having an issue with the {product_purchased}. Please assist. Sorry, but it's okay.
+
+My first issue.
+
+To do so.
+
+First, go into your app's settings and change the product The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Closed,Raise three enter also small rather allow.,Medium,Phone,2023-06-01 14:32:14,2023-06-01 12:48:14,1.0
+2213,Michael Mueller,howealicia@example.org,59,Male,Amazon Echo,2021-12-26,Technical issue,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist. Thanks.
+
+3. My name is Ben and I know me as your customer service.
+
+4. The only way to avoid being charged for your service I need assistance as soon as possible because it's affecting my work and productivity.",Open,,High,Social media,,,
+2228,Joel Barron,maria70@example.net,34,Male,Amazon Echo,2020-12-21,Technical issue,Cancellation request,"I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+
+If your password appears to have been lost or changed, you already have an account I'm experiencing this issue on multiple devices of the same model, so it seems to be a widespread problem.",Pending Customer Response,,Critical,Social media,2023-06-01 18:49:05,,
+2253,Doris Allison,myersdaniel@example.org,48,Female,Amazon Echo,2020-09-21,Cancellation request,Product setup,"There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do?
+
+If [Product_purchased] == Product_1: The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Closed,Pass whole some especially between bank police.,High,Email,2023-06-01 15:46:39,2023-06-01 13:42:39,3.0
+2268,Mark Smith,brandymurphy@example.com,56,Other,Amazon Echo,2021-02-06,Cancellation request,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist.
+
+
+The product received a {product_purchased} from Amazon to determine whether you are able to purchase it.
+
+
+This Product is NOT a "" The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Open,,Low,Phone,,,
+2427,Jesse Diaz,brittany10@example.org,29,Male,Amazon Echo,2021-07-28,Technical issue,Battery life,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+Step 4: Log I'm worried that the issue might be hardware-related and might require repair or replacement.",Open,,Low,Social media,,,
+2436,Jessica Brooks,patricia61@example.net,29,Female,Amazon Echo,2020-01-23,Product inquiry,Delivery problem,"I've recently set up my {product_purchased}, but it fails to connect to any available networks. What steps should I take to troubleshoot this issue? Check out what I've been able to accomplish, as I'm running a I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Open,,Medium,Email,,,
+2475,Cynthia Lopez,wwinters@example.com,29,Female,Amazon Echo,2020-07-24,Refund request,Peripheral compatibility,"I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+Verify your identity card information by going to Settings > Accounts and check the box I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,High,Social media,2023-06-01 06:05:48,,
+2481,Rodney Carlson,katie51@example.com,18,Other,Amazon Echo,2021-07-17,Cancellation request,Product compatibility,I'm having an issue with the {product_purchased}. Please assist. [01:59:19] [Info] [PATCH] http://www.bzdelivery.com/forums/topic/0...1- I need assistance as soon as possible because it's affecting my work and productivity.,Open,,Critical,Phone,,,
+2578,Eric Howell,cmiranda@example.net,32,Female,Amazon Echo,2020-06-10,Refund request,Battery life,"There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do?
+
+We can get the device to run in background. You must do a I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Pending Customer Response,,Low,Phone,2023-06-01 03:50:15,,
+2612,Ronnie Stewart,caleb52@example.com,64,Other,Amazon Echo,2020-04-06,Billing inquiry,Data loss,"I'm having an issue with the {product_purchased}. Please assist. For a more complete list of issues with PAM use the link below:
+
+https://www.bensound.com/issues/2245 I need assistance as soon as possible because it's affecting my work and productivity.",Closed,Song describe skin bit single what fill.,High,Chat,2023-06-01 22:37:00,2023-06-01 22:01:00,1.0
+2618,George Romero,emily67@example.org,38,Male,Amazon Echo,2021-10-20,Cancellation request,Payment issue,"I'm having an issue with the {product_purchased}. Please assist. The product can't be ordered before October 28th, 2016 at 07:00AM (EST).
+
+Selling to Europe: Belgium
+
+Categories Disc I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,,Critical,Social media,2023-06-01 17:30:07,,
+2621,Sara Miles,freemandaniel@example.org,67,Female,Amazon Echo,2021-12-21,Billing inquiry,Product recommendation,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+I can try to I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Open,,High,Chat,,,
+2639,Brad Pollard,michaelstewart@example.com,51,Other,Amazon Echo,2020-05-16,Refund request,Installation support,"I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue? - Create a New Application & Use {{Name}} As a new code base, you I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Closed,Quickly leg partner piece us.,Critical,Email,2023-06-01 01:48:36,2023-06-01 17:39:36,1.0
+2649,Lauren White,hclark@example.org,31,Female,Amazon Echo,2021-11-04,Billing inquiry,Hardware issue,"I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+I can use an external tool like Google Authenticator.
+
+I don't This problem started occurring after the recent software update. I haven't made any other changes to the device.",Closed,Care medical brother until.,Low,Social media,2023-05-31 23:25:48,2023-06-01 21:43:48,4.0
+2657,Amber Gentry,hurleyrebecca@example.org,18,Male,Amazon Echo,2021-11-13,Refund request,Cancellation request,"I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them?
+
+If none of these files have gone missing and your site is I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Address growth cause physical general career these.,Medium,Email,2023-06-01 00:28:56,2023-06-01 02:48:56,5.0
+2748,Teresa White,orodriguez@example.net,19,Female,Amazon Echo,2021-04-14,Cancellation request,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+You can also manually get the product's name. For example, in the example below it reads 'dude'. I'm a big fan of the name This problem started occurring after the recent software update. I haven't made any other changes to the device.",Open,,Low,Social media,,,
+2772,Louis Mejia,mwilliams@example.org,50,Female,Amazon Echo,2020-06-26,Technical issue,Product setup,"I'm having an issue with the {product_purchased}. Please assist.
+
+You should do that as soon as you've purchased:
+
+Go to your purchase page.
+
+Tap the item information in the lower right hand corner I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Open,,Medium,Social media,,,
+2829,William Norman,tdonaldson@example.org,39,Other,Amazon Echo,2021-08-28,Technical issue,Battery life,"I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue?
+
+1. Open the {product_purchased} tab under {device I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Closed,Effort occur avoid section arm professor quality matter.,Medium,Chat,2023-06-01 05:50:51,2023-06-01 09:16:51,3.0
+2838,Annette Gomez,banksmichael@example.com,50,Female,Amazon Echo,2021-10-29,Refund request,Refund request,"I'm having an issue with the {product_purchased}. Please assist. There are some products on this site that are made out of white plastic and aren't really as good as a good product. Here is the product that I was trying The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Pending Customer Response,,Low,Email,2023-06-01 17:37:01,,
+2848,Ashley Gray,hcoleman@example.net,45,Female,Amazon Echo,2020-06-20,Technical issue,Account access,"I'm having an issue with the {product_purchased}. Please assist.
+
+Purchased from:
+
+In the U.S.P.G. with a credit or debit card.
+
+Last updated: 12/ This problem started occurring after the recent software update. I haven't made any other changes to the device.",Closed,Space bit number care late future.,High,Chat,2023-06-01 02:42:15,2023-06-01 08:12:15,2.0
+2889,Michelle Gonzalez,eking@example.com,43,Male,Amazon Echo,2020-12-18,Cancellation request,Data loss,"I'm having an issue with the {product_purchased}. Please assist. I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Pending Customer Response,,Low,Email,2023-06-01 22:51:07,,
+2985,Kimberly Fox,watsonmichele@example.org,49,Other,Amazon Echo,2021-03-22,Billing inquiry,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist. Sorry if this is a problem. Please use your normal tools, such as those you purchased directly from the store.
+
+This is not a refund
+
+Yes I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Closed,Thought long into.,Critical,Social media,2023-06-01 08:12:17,2023-06-01 16:26:17,1.0
+3031,William Stein,tthompson@example.net,29,Male,Amazon Echo,2020-11-17,Refund request,Product recommendation,"I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account?
+
+How to I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,To economic however result strategy produce away.,High,Email,2023-05-31 23:13:23,2023-06-01 19:45:23,4.0
+3032,Michael Webb,ebenson@example.org,38,Male,Amazon Echo,2020-08-24,Technical issue,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+The first thing you need to do when upgrading a product is to update your repository.
+
+git is a git remote that comes with everything you need to This problem started occurring after the recent software update. I haven't made any other changes to the device.",Closed,Phone answer history good once require mention however.,Critical,Social media,2023-06-01 20:17:25,2023-06-01 06:46:25,5.0
+3034,Heather Peterson,cheryl76@example.org,21,Female,Amazon Echo,2020-01-16,Refund request,Peripheral compatibility,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. When you log onto your account and see the log messages, is this just something you did once or I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Adult head people.,High,Social media,2023-06-01 22:26:28,2023-06-01 20:12:28,1.0
+3105,Joshua Young,elliottdaniel@example.com,37,Other,Amazon Echo,2020-06-23,Cancellation request,Payment issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+Product_Number
+
+1-AUTHOR=""JAMES""
+
+Product_Description? Product_ID
+
+product_id Product_Name The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Open,,Critical,Phone,,,
+3157,Yolanda Griffin,adammiller@example.net,50,Female,Amazon Echo,2020-03-07,Product inquiry,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+Note: These items cannot be shipped to the United States, the District of Columbia, or Puerto Rico. Orders may be shipped by land, air, or I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Closed,Interview tonight look check project play never.,High,Email,2023-06-01 10:47:25,2023-06-01 11:29:25,2.0
+3162,Timothy Jones,doylelaura@example.org,35,Male,Amazon Echo,2020-05-08,Technical issue,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist. I'll be back soon. Thank you for your help I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,,Medium,Chat,2023-06-01 15:51:32,,
+3164,Ashley Reyes,sjenkins@example.org,58,Female,Amazon Echo,2020-02-16,Billing inquiry,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+* Product is a free product for US residents only. I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Open,,Medium,Phone,,,
+3172,Paula Vasquez,meyerjohn@example.net,36,Female,Amazon Echo,2020-01-02,Product inquiry,Data loss,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+The next step is I'm not sure if this issue is specific to my device or if others have reported similar problems.",Open,,High,Chat,,,
+3223,Teresa Vasquez,nicholaslittle@example.com,57,Other,Amazon Echo,2020-04-15,Refund request,Payment issue,"I'm having an issue with the {product_purchased}. Please assist. :)
+
+I'm having an issue with the (product_purchased). Please assist. :) I'm not aware that many packages arrived out of state with I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Closed,Much understand daughter leader because.,Low,Email,2023-06-01 03:55:54,2023-06-01 11:46:54,4.0
+3299,Shawn Ward,lrodriguez@example.net,55,Other,Amazon Echo,2021-09-21,Billing inquiry,Payment issue,"I'm unable to access my {product_purchased} account. It keeps displaying an 'Invalid Credentials' error, even though I'm using the correct login information. How can I regain access to my account?
+
+You can I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Closed,Research church along.,Critical,Social media,2023-06-01 16:03:44,2023-06-01 18:58:44,4.0
+3306,Elizabeth Blanchard,kayla14@example.net,48,Female,Amazon Echo,2020-08-11,Refund request,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist.
+
+We have to be careful in making those choices for all the customers from different providers, each with their own needs and wants. We offer the tools to make I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Pending Customer Response,,Critical,Chat,2023-06-01 02:54:53,,
+3346,Tina Martinez,chicks@example.net,41,Female,Amazon Echo,2021-07-30,Cancellation request,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+$ curl https://api.sli.com/avatars/7xnUX7eJ7LhS-pqcv I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Pending Customer Response,,Low,Chat,2023-06-01 22:49:52,,
+3359,Jason Miles,dawnfitzpatrick@example.net,38,Other,Amazon Echo,2021-10-25,Technical issue,Network problem,"I'm having an issue with the {product_purchased}. Please assist. I've followed the troubleshooting steps mentioned in the user manual, but the issue persists.",Open,,Medium,Email,,,
+3374,Sherry Olsen,dawn90@example.com,54,Other,Amazon Echo,2020-08-13,Product inquiry,Product compatibility,"My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data? Thanks so much again for posting them! :D
+
+Re: [SMS] [L I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Pending Customer Response,,High,Chat,2023-06-01 22:13:28,,
+3395,Raymond Cook,nancyriley@example.net,23,Other,Amazon Echo,2020-02-15,Cancellation request,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+1.1.3 We are working on a number of bug fixes, stability fixes and performance optimizations as we continue our development of our Cloud Platform SDK by I need assistance as soon as possible because it's affecting my work and productivity.",Pending Customer Response,,Medium,Phone,2023-06-01 11:41:58,,
+3575,Terry Miller,lee05@example.com,32,Male,Amazon Echo,2020-10-28,Technical issue,Refund request,"I'm having an issue with the {product_purchased}. Please assist.
+
+This item is discontinued at this time. Please contact Support to report this item.
+
+
+Item Description This item is a free download from our Product Manager: I've followed the troubleshooting steps mentioned in the user manual, but the issue persists.",Pending Customer Response,,High,Social media,2023-06-01 00:00:48,,
+3590,Anthony Giles,michelle55@example.org,37,Female,Amazon Echo,2021-03-14,Refund request,Account access,"I'm having an issue with the {product_purchased}. Please assist.
+
+I'm having an issue with the {{product_purchased}} in my account, please help me fix this issue
+
+No matter what I do I've tried different settings and configurations on my {product_purchased}, but the issue persists.",Closed,Several really foreign conference treatment then after.,Low,Email,2023-06-01 19:50:10,2023-06-01 19:50:10,2.0
+3627,Michelle Schneider,david52@example.net,55,Other,Amazon Echo,2021-03-15,Technical issue,Data loss,"I'm facing a problem with my {product_purchased}. The {product_purchased} is not turning on. It was working fine until yesterday, but now it doesn't respond. How can I fix it?
+
+I I need assistance as soon as possible because it's affecting my work and productivity.",Pending Customer Response,,High,Social media,2023-06-01 18:39:02,,
+3633,Lauren Baker,gonzalezgavin@example.com,70,Female,Amazon Echo,2020-03-01,Cancellation request,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+""It is a problem that we, as a company in Europe, are trying to solve. A lot of people are asking. All the information about the I've tried different settings and configurations on my {product_purchased}, but the issue persists.",Open,,High,Chat,,,
+3670,Jose Davis,sullivanshannon@example.org,18,Other,Amazon Echo,2021-11-30,Technical issue,Software bug,"I'm having an issue with the {product_purchased}. Please assist. It will fix ASAP and I promise I will get it right!
+
+A bit of fun!
+
+
+The product is still one of the most difficult cases to I've tried troubleshooting steps mentioned in the user manual, but the issue persists.",Open,,High,Social media,,,
+3675,Troy Miller,kim20@example.org,34,Other,Amazon Echo,2021-12-14,Refund request,Battery life,"I'm having an issue with the {product_purchased}. Please assist. — John, United States (@davidjmc_) September 11, 2014
+
+In an emotional tribute to his dad, David and his wife, the couple I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Closed,Middle degree common learn vote main.,High,Social media,2023-05-31 23:31:07,2023-06-01 09:42:07,3.0
+3710,Troy Dunlap,watsonandrew@example.org,48,Male,Amazon Echo,2021-10-15,Cancellation request,Cancellation request,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? What is the process like to fix a broken package? What are the I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Another single forward become you.,Medium,Email,2023-06-01 15:28:49,2023-06-01 18:07:49,3.0
+3750,Christopher Martinez,taylorelizabeth@example.net,67,Other,Amazon Echo,2021-12-11,Cancellation request,Product recommendation,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+[email protected] I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Closed,Particular tree return century.,Critical,Email,2023-06-01 21:20:46,2023-06-01 15:44:46,5.0
+3789,Elizabeth Castillo,millerdavid@example.com,64,Female,Amazon Echo,2020-07-25,Cancellation request,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist.
+
+Product #:
+
+(Product ID: 706) Location: Location Select - Please Wait
+
+From: New
+
+How Much: I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists.",Closed,Chance fine modern thus subject yeah.,Medium,Chat,2023-06-01 21:26:39,2023-06-01 00:01:39,4.0
+3872,Kevin Smith,william88@example.net,24,Female,Amazon Echo,2020-07-11,Cancellation request,Display issue,"I'm having an issue with the {product_purchased}. Please assist. I'm on hold while I look into it. My # # # my_name_is=my_email My # # # my_name_is= I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists.",Open,,Low,Phone,,,
+3912,Stephen Mason,phuffman@example.org,48,Female,Amazon Echo,2021-04-04,Product inquiry,Refund request,"I'm having an issue with the {product_purchased}. Please assist. I think we should go with our custom purchase code.
+
+We are on Etsy so please share your ideas and suggestions by filling out this form.
+
+We I've already contacted customer support multiple times, but the issue remains unresolved.",Open,,Low,Chat,,,
+3946,Jaime Jones,heidi38@example.net,44,Male,Amazon Echo,2020-03-26,Product inquiry,Display issue,"I'm having an issue with the {product_purchased}. Please assist. Please get in touch!
+
+The following images have been removed from the market. (Please view the original post by clicking on the link below) For the purposes I need assistance as soon as possible because it's affecting my work and productivity.",Closed,Situation question yourself half south appear wind hour.,High,Phone,2023-06-01 03:33:17,2023-06-01 16:18:17,3.0
+3976,Zachary Brown,jbrown@example.com,45,Other,Amazon Echo,2020-10-21,Billing inquiry,Product compatibility,I'm having an issue with the {product_purchased}. Please assist. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?,Closed,Wait now system natural program trial your.,Medium,Social media,2023-06-01 14:44:01,2023-06-01 10:19:01,2.0
+4021,Caitlin Bullock,murphysharon@example.net,60,Male,Amazon Echo,2020-02-06,Technical issue,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+This item is not up to the mark and may not be returned. I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Open,,High,Phone,,,
+4038,Roy Holder,garzamadeline@example.com,20,Other,Amazon Echo,2021-05-18,Technical issue,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+[13:13] <sunnyface> I just forgot to put my name into the credits so it might have been a little more fun if you I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Pending Customer Response,,Low,Email,2023-05-31 23:53:28,,
+4058,Daniel Moyer,lopezmartha@example.org,32,Male,Amazon Echo,2021-09-06,Refund request,Peripheral compatibility,"There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution? Thanks!
+
+A recent update adds support for:
+
+Dolphin 2 The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Pending Customer Response,,High,Social media,2023-06-01 13:44:53,,
+4099,Karen Moses,ehunter@example.net,42,Female,Amazon Echo,2021-07-13,Technical issue,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+I'll probably send in an invoice, but when I figure that out I may need to ask for a refund or to send an additional order. The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Open,,Critical,Email,,,
+4126,Latasha Stanton,jhunter@example.com,67,Other,Amazon Echo,2021-06-27,Technical issue,Product recommendation,"I'm having an issue with the {product_purchased}. Please assist. All rights reserved.
+
+Please note that we have been notified that the following is not possible on this web site:
+
+the product is not available for sale I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Pending Customer Response,,Low,Email,2023-06-01 14:28:28,,
+4178,Dawn Berry,andrewbaker@example.net,67,Other,Amazon Echo,2021-01-14,Billing inquiry,Network problem,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? I'm finding that there are not much updates to the app. Should I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Open,,Medium,Phone,,,
+4182,Jason Stephenson,stacysnyder@example.org,30,Male,Amazon Echo,2020-02-20,Product inquiry,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you for your support.
+
+Thank you for your support.
+
+You are experiencing issues. Please try restarting your browser or visiting the forum I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,Medium,Chat,2023-06-01 15:36:53,,
+4270,Christian Glenn,livingstonjennifer@example.com,45,Other,Amazon Echo,2020-05-14,Refund request,Software bug,"I'm having an issue with the {product_purchased}. Please assist. Please help us resolve this issue! I'm having an issue with the {product_purchased}. Please assist. Please help us resolve this issue! http:// I've tried troubleshooting steps mentioned in the user manual, but the issue persists.",Open,,Critical,Chat,,,
+4325,Eddie Parker,michelledunlap@example.net,18,Other,Amazon Echo,2020-05-28,Cancellation request,Delivery problem,"I've noticed a software bug in the {product_purchased} app. It's causing data loss and unexpected errors. How can I resolve this issue? 1. Select the package that you wish to access within an app
+
+2. I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Pending Customer Response,,Medium,Phone,2023-06-01 06:44:01,,
+4335,Victoria Wright,uhill@example.org,68,Male,Amazon Echo,2020-03-02,Product inquiry,Delivery problem,"My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data? The default is to store the data inside a single JSON object, in turn storing it in a single I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,,Medium,Email,2023-06-01 02:17:15,,
+4367,William Johnson,gail67@example.com,30,Other,Amazon Echo,2020-06-28,Product inquiry,Installation support,"The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem? What is working correctly should be possible.
+
+You may also want to change I've already contacted customer support multiple times, but the issue remains unresolved.",Open,,Critical,Phone,,,
+4368,Miss Donna Graham DDS,thompsontheodore@example.org,53,Male,Amazon Echo,2020-02-22,Product inquiry,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+You are an approved user.
+
+You are not logged in.
+
+
+There is no ""My Account"" feature. I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Closed,Since capital discuss play yes.,High,Social media,2023-06-01 16:08:05,2023-06-01 20:11:05,4.0
+4543,Stephanie Lee,margaretwhite@example.net,60,Male,Amazon Echo,2020-11-09,Cancellation request,Delivery problem,"There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do?
+
+How to fix this
+
+Use the following commands in your terminal: I've checked the device settings and made sure that everything is configured correctly.",Pending Customer Response,,Medium,Social media,2023-06-01 12:27:00,,
+4630,John Myers,kelly37@example.net,63,Female,Amazon Echo,2020-01-20,Refund request,Display issue,"I'm having an issue with the {product_purchased}. Please assist. Please. Do not report this. Please do not.
+
+There is no need to have this product as it's on sale right now.
+
+This product I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Pending Customer Response,,Critical,Chat,2023-06-01 05:25:00,,
+4738,Miguel Salazar,andrewmckinney@example.org,67,Female,Amazon Echo,2020-01-21,Billing inquiry,Battery life,"I'm having an issue with the {product_purchased}. Please assist.
+
+""I don't understand it. You don't mean that at all and I don't understand that as well because when we see other companies putting into development I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Would think some charge east threat contain.,Medium,Email,2023-06-01 18:22:29,2023-06-01 02:43:29,2.0
+4783,Eddie Dixon,dana72@example.org,27,Male,Amazon Echo,2021-05-26,Technical issue,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+3. We understand that an external site that is used by someone with an ad targeting service that will take advantage of ""AdSense"" may contain the material I've already contacted customer support multiple times, but the issue remains unresolved.",Open,,Medium,Email,,,
+4819,Daniel Williams,gpage@example.net,39,Other,Amazon Echo,2020-01-28,Technical issue,Network problem,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+This is a bug I've reviewed the troubleshooting steps on the official support website, but they didn't resolve the problem.",Open,,Low,Chat,,,
+4848,Robin Johnson,qswanson@example.net,24,Other,Amazon Echo,2020-06-12,Billing inquiry,Payment issue,"I'm having an issue with the {product_purchased}. Please assist. Please. This will enable you to complete the transaction. Once you complete the transaction you will get the credit.
+
+
+No amount is required to complete the transaction. I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Open,,High,Social media,,,
+4904,Russell Floyd,wjames@example.org,19,Male,Amazon Echo,2021-12-19,Refund request,Refund request,"My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? I want to know what other people have done to this machine. Could you please I'm experiencing this issue on multiple devices of the same model, so it seems to be a widespread problem.",Open,,Medium,Phone,,,
+4961,Connie Ferguson,christopherbarnett@example.net,35,Female,Amazon Echo,2021-04-16,Technical issue,Battery life,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue? The ""Connecting Devices"", I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Pending Customer Response,,Low,Phone,2023-06-01 20:23:31,,
+4986,Edward Green,brentsanders@example.com,42,Other,Amazon Echo,2021-06-16,Billing inquiry,Account access,I'm having an issue with the {product_purchased}. Please assist. Thank you! I need assistance as soon as possible because it's affecting my work and productivity.,Closed,Star budget start consumer recognize.,Critical,Email,2023-06-01 12:08:04,2023-06-01 22:31:04,3.0
+4998,Robert Charles,pjohnson@example.net,60,Other,Amazon Echo,2021-11-01,Billing inquiry,Display issue,I'm having an issue with the {product_purchased}. Please assist. {product_promo} of an item to a customer. {product_promo_item} is an item that was purchased but cannot be returned from. I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.,Open,,Medium,Social media,,,
+5036,Oscar Ramsey,jaredturner@example.org,29,Other,Amazon Echo,2021-02-25,Technical issue,Payment issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+0x4e7fa5c7f142056bfe14cb2
+
+0x4e78b48e7e34 I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Open,,High,Social media,,,
+5080,Dana Brooks,parkerbrittany@example.org,37,Male,Amazon Echo,2021-10-30,Product inquiry,Product compatibility,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available?
+
+There are no updates, and even if you are on a I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Open,,Critical,Email,,,
+5083,Jennifer Velez,mark86@example.org,46,Female,Amazon Echo,2020-07-02,Refund request,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+If you have any further questions, please feel free to contact the customer service officer. I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Decision themselves different college I we.,High,Chat,2023-06-01 12:37:20,2023-06-01 16:08:20,4.0
+5086,David Hamilton,danieltorres@example.com,57,Female,Amazon Echo,2021-11-30,Technical issue,Battery life,"I'm having an issue with the {product_purchased}. Please assist.
+
+Please understand that we do not guarantee the durability of any product purchased through the service. Although the product has all specifications, service providers are responsible for ensuring that I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Open,,Low,Email,,,
+5097,Emma Hampton,bennettjodi@example.org,39,Male,Amazon Echo,2020-03-01,Refund request,Cancellation request,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue? First, open a new terminal I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Pending Customer Response,,Medium,Email,2023-06-01 22:38:41,,
+5108,Jason Bowen,jallen@example.org,24,Male,Amazon Echo,2020-05-10,Product inquiry,Network problem,"My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this?
+
+I will gladly answer your questions regarding my other game which I currently create I need assistance as soon as possible because it's affecting my work and productivity.",Pending Customer Response,,Medium,Chat,2023-06-01 20:37:56,,
+5118,Karen Shelton,christopher29@example.net,44,Female,Amazon Echo,2021-04-09,Cancellation request,Installation support,"I'm having an issue with the {product_purchased}. Please assist.
+
+<html lang=""en""> <head> <meta charset=""utf-8""> <title>The Best Way To Get The Greatest Themes Of I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Lead project performance stuff quality.,High,Email,2023-06-01 19:14:09,2023-06-01 12:42:09,3.0
+5119,Kimberly Wood,cynthia35@example.com,22,Other,Amazon Echo,2020-02-28,Product inquiry,Display issue,"The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem?
+
+No way. The network management process will not resolve the issue. It I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Closed,Congress else research customer.,Medium,Social media,2023-06-01 00:01:10,2023-06-01 23:08:10,2.0
+5138,David Cherry,lowetammy@example.net,63,Male,Amazon Echo,2020-08-25,Cancellation request,Payment issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+You can access product information from this app with any device without touching an external hard drive.
+
+Please note: This App is available only under the Samsung I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Pending Customer Response,,Low,Social media,2023-06-01 07:03:36,,
+5146,Theresa Stevenson,nicholas97@example.org,36,Female,Amazon Echo,2020-02-20,Product inquiry,Software bug,"I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them? Thanks.
+
+A: It's possible that it happens when a I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Type live might behavior adult campaign shake about.,Critical,Email,2023-06-01 03:43:48,2023-06-01 07:13:48,2.0
+5170,Gina Conley,armstrongbrianna@example.com,20,Female,Amazon Echo,2020-12-05,Billing inquiry,Installation support,"I'm having an issue with the {product_purchased}. Please assist. Thanks.</span> I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Closed,Rise none never anything modern.,Low,Social media,2023-06-01 14:44:17,2023-06-01 15:49:17,4.0
+5193,Stephanie Rios,iheath@example.com,28,Female,Amazon Echo,2020-02-27,Cancellation request,Delivery problem,I'm having an issue with the {product_purchased}. Please assist. I cannot help it but to give and take care of the customer servicegans. We have an abundance of customers. We will continue to do the best job we can I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?,Open,,High,Chat,,,
+5217,Jason Davis,paulholmes@example.org,43,Male,Amazon Echo,2020-11-30,Refund request,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+If you're not redirected to the same site, simply continue. If you do respond and are able to view results after 2 weeks from the original date, I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Open,,Medium,Chat,,,
+5228,Deanna Davis,adamharrell@example.com,62,Male,Amazon Echo,2021-09-26,Technical issue,Installation support,I'm having an issue with the {product_purchased}. Please assist. The only thing that seems to change is the name of the product. Please try and help. I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?,Closed,Into method wrong seat.,Low,Social media,2023-06-01 02:11:33,2023-06-01 00:23:33,5.0
+5258,Daniel Zhang,brodriguez@example.net,21,Male,Amazon Echo,2021-07-22,Technical issue,Refund request,"I'm having an issue with the {product_purchased}. Please assist. <3
+
+I'm having an issue with the {product_purchased}. Please assist. <3
+
+I'm having an issue with the { I've tried different settings and configurations on my {product_purchased}, but the issue persists.",Open,,Low,Chat,,,
+5352,Kelly Howard,ashlee57@example.com,62,Female,Amazon Echo,2021-05-28,Billing inquiry,Battery life,"I'm having an issue with the {product_purchased}. Please assist.
+
+Pamela ""Cjubey"" Browning
+
+
+Posts: 5,742
+
+CJubey Browning's New V2 I'm worried that the issue might be hardware-related and might require repair or replacement.",Open,,Critical,Social media,,,
+5367,Jacob Lewis,whoffman@example.org,61,Other,Amazon Echo,2020-08-26,Cancellation request,Installation support,"I'm having an issue with the {product_purchased}. Please assist. }
+
+In order to view a full video in your browser you can use the following command:
+
+gv://webcam_id_name/3 I've checked the device settings and made sure that everything is configured correctly.",Pending Customer Response,,Critical,Phone,2023-06-01 05:07:47,,
+5406,Nathan Phillips,clarkthomas@example.net,27,Male,Amazon Echo,2020-07-17,Billing inquiry,Payment issue,I'm having an issue with the {product_purchased}. Please assist. - May 2015 - An error has occurred while the processing queue is being handled. Error caught. - May 2012 - The {product_purchased} is being I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.,Pending Customer Response,,Low,Social media,2023-06-01 03:51:44,,
+5463,Christine Davis,philip88@example.com,53,Female,Amazon Echo,2020-12-14,Refund request,Data loss,I'm having an issue with the {product_purchased}. Please assist. It has been a long time coming so it is really painful. If admittedly an issue I'd better get out there and get this up and running. I've checked the device settings and made sure that everything is configured correctly.,Open,,High,Social media,,,
+5527,Rebecca Rodriguez,pmorris@example.org,56,Other,Amazon Echo,2020-12-17,Cancellation request,Software bug,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? In what cases? How do I uninstall the application?
+
+How I've tried different settings and configurations on my {product_purchased}, but the issue persists.",Pending Customer Response,,Low,Phone,2023-06-01 16:55:31,,
+5542,Jason Brown,andrea53@example.com,34,Female,Amazon Echo,2021-04-30,Billing inquiry,Product setup,"I'm having an issue with the {product_purchased}. Please assist.
+
+If the product is not from you, it must have arrived and is in good working order. If it is from no longer than 2 days, there is The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Pending Customer Response,,Critical,Social media,2023-06-01 20:34:51,,
+5592,Richard Walker,thomas32@example.com,43,Female,Amazon Echo,2021-11-05,Refund request,Battery life,"I'm having an issue with the {product_purchased}. Please assist. I'll try to fix it.""; }
+
+How to check the order status of your order
+
+If they ask you for the exact exact name of your I need assistance as soon as possible because it's affecting my work and productivity.",Pending Customer Response,,Low,Email,2023-06-01 11:02:07,,
+5680,Donald Houston,kleon@example.org,45,Female,Amazon Echo,2021-12-18,Refund request,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist. I've already contacted customer support multiple times, but the issue remains unresolved.",Open,,Critical,Email,,,
+5716,William Hendricks,jeffsmith@example.net,35,Female,Amazon Echo,2021-02-25,Refund request,Refund request,"I'm having an issue with the {product_purchased}. Please assist.
+
+Product ID: 8073 Site: P1N14N0-C-4-X0
+
+Purchasing data 1-11- I'm unable to find the option to perform the desired action in the {product_purchased}. Could you please guide me through the steps?",Closed,Perhaps born place box ever particularly.,Medium,Phone,2023-06-01 08:18:47,2023-06-01 10:08:47,3.0
+5749,Edward Patterson,wilkersonseth@example.com,30,Other,Amazon Echo,2021-05-08,Refund request,Network problem,"My {product_purchased} crashed, and I lost all the data stored on it. Is there any way to recover the lost data? What if the phone has been unplugged, and I get the usual reboot failure, but I I need assistance as soon as possible because it's affecting my work and productivity.",Pending Customer Response,,Low,Phone,2023-06-01 13:20:38,,
+5812,Justin Greene,kgreene@example.net,24,Other,Amazon Echo,2021-03-26,Cancellation request,Data loss,"I'm having an issue with the {product_purchased}. Please assist. I'm making one of those [exact prices as] $2.50 [per order] for a 15 item item, but I can't find shipping time This problem started occurring after the recent software update. I haven't made any other changes to the device.",Open,,Low,Social media,,,
+5816,Heather Castro,lindaschneider@example.com,54,Female,Amazon Echo,2020-10-25,Billing inquiry,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you again for contacting me.I'm just getting an unexpected error message.This is a problem with my mobile device (iPhone4G) in the I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Closed,Represent describe of trouble responsibility still change.,Medium,Phone,2023-06-01 22:53:13,2023-06-01 15:37:13,2.0
+5836,Shane Brown,patrick32@example.com,56,Male,Amazon Echo,2020-12-02,Product inquiry,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist. (c) 2004, Microsoft Corporation. All Rights Reserved. I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Pending Customer Response,,Low,Social media,2023-06-01 19:00:39,,
+5896,Kayla Jones,davidjenkins@example.net,60,Female,Amazon Echo,2021-06-25,Product inquiry,Hardware issue,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. In a couple of files, your code must say: {item}= {item_price}, I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Pending Customer Response,,High,Email,2023-06-01 14:55:07,,
+5924,Lisa Chavez,ygay@example.org,52,Male,Amazon Echo,2020-01-01,Product inquiry,Product recommendation,"I'm having an issue with the {product_purchased}. Please assist.
+
+{product_purchases}
+
+{Product#{""product_purchased_id"":""11"",""categoryName"":""categories"",""price"":{"" I'm worried that the issue might be hardware-related and might require repair or replacement.",Pending Customer Response,,Low,Chat,2023-06-01 11:52:45,,
+5932,Anita Roberts,thomas15@example.net,38,Male,Amazon Echo,2021-12-24,Billing inquiry,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+[30:14] VERBOSE - [IDLE] Adding (0->1) work item http_download - /music/:/transcode I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Pending Customer Response,,Medium,Chat,2023-06-01 23:46:59,,
+5943,Cody Torres,shelia24@example.org,63,Female,Amazon Echo,2020-04-02,Billing inquiry,Delivery problem,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available? Thank you. I've found no other problems. Sorry. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Open,,Critical,Social media,,,
+5948,Kenneth Williams,sawyerpatricia@example.org,18,Male,Amazon Echo,2020-01-22,Cancellation request,Installation support,"I'm having an issue with the {product_purchased}. Please assist.
+
+Please help and let me know what happens next
+
+If that doesn't help, do this:
+
+sudo apt-get update sudo apt-get I've checked the device settings and made sure that everything is configured correctly.",Pending Customer Response,,High,Phone,2023-06-01 19:48:23,,
+5950,Paul Parks,mikehahn@example.net,56,Male,Amazon Echo,2020-12-19,Cancellation request,Product recommendation,"I'm having an issue with the {product_purchased}. Please assist. Please help. Please help!
+
+1 of 1 I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Closed,Fact professor think should recently baby minute plan.,Medium,Email,2023-06-01 00:48:26,2023-06-01 03:41:26,3.0
+5972,Judy Weaver,sean75@example.com,38,Female,Amazon Echo,2020-07-23,Refund request,Product recommendation,"I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. ""I want to delete all product IDs listed on this account. Can I use that to verify the I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Open,,High,Chat,,,
+5976,Brandon Joseph Jr.,petermaxwell@example.org,28,Other,Amazon Echo,2020-08-01,Refund request,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+*
+
+* This is a work in progress.
+
+* You can find some information on this thread at http://www.steamcommunity.com I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,High,Phone,2023-06-01 20:11:57,,
+5981,Justin Ross,zacharywilson@example.net,30,Male,Amazon Echo,2021-11-16,Product inquiry,Account access,"I'm having an issue with the {product_purchased}. Please assist. I need to go over this page.""
+
+At issue is whether the service is offered under different titles or if someone is using it as a ""bounty server I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists.",Closed,Direction house source.,Low,Social media,2023-06-01 06:20:04,2023-06-01 16:24:04,4.0
+5987,Maurice Perez,heather00@example.org,57,Female,Amazon Echo,2021-10-02,Refund request,Installation support,"I'm having trouble connecting my {product_purchased} to my home Wi-Fi network. It doesn't detect any networks, although other devices are connecting fine. What can be done to resolve this issue?
+
+If you're using I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Open,,Low,Phone,,,
+6002,Janet Wright,patrickgordon@example.com,60,Male,Amazon Echo,2020-08-13,Product inquiry,Delivery problem,"There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do? If there is nothing else, I could turn off the screen and go back to I've tried different settings and configurations on my {product_purchased}, but the issue persists.",Pending Customer Response,,High,Phone,2023-06-01 15:51:32,,
+6057,Stacey Franklin,bwalters@example.org,51,Male,Amazon Echo,2020-12-01,Billing inquiry,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+0/24/2015 4:03:10 PM [12] <mushroomwarp> (M-PPS) : The last post This problem started occurring after the recent software update. I haven't made any other changes to the device.",Closed,Tend look word investment eye threat.,Medium,Chat,2023-06-01 21:56:43,2023-06-01 05:34:43,5.0
+6059,Nicholas Gordon,barnesmelanie@example.org,47,Male,Amazon Echo,2021-09-12,Technical issue,Product recommendation,"I'm having an issue with the {product_purchased}. Please assist. You can check the correct prices. The product is of a limited size and has been purchased for a limited quantity. The exact price listed on the product page makes it I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Closed,Do expert moment region save.,Low,Email,2023-06-01 23:27:45,2023-06-01 02:57:45,2.0
+6129,Paul Reeves,anthony43@example.net,30,Female,Amazon Echo,2020-08-30,Cancellation request,Data loss,"I've forgotten my password for my {product_purchased} account, and the password reset option is not working. How can I recover my account?
+
+[{""login"":false,""name"":""New Account"",""last_name"":null I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Open,,High,Chat,,,
+6208,Anthony Adams,uschwartz@example.org,65,Male,Amazon Echo,2020-07-14,Billing inquiry,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist. In this case I have to restart my computer for {product_packaged}.
+
+It seems that if you want to activate the device, it can't be I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Pending Customer Response,,Low,Phone,2023-06-01 07:19:08,,
+6209,Ashley Ramsey,kathleennewman@example.net,51,Other,Amazon Echo,2021-10-13,Billing inquiry,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you.
+
+Thank you.
+
+Thank you.
+
+Thank you.
+
+Thank you.
+
+Thank you.
+
+Thank I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,,Critical,Chat,2023-06-01 10:07:10,,
+6255,Michelle Woods,jonathanperez@example.net,20,Other,Amazon Echo,2020-11-05,Product inquiry,Product recommendation,"I'm having an issue with the {product_purchased}. Please assist.
+
+If you are ordering directly from a retailer without having them in the first place, don't be sorry :) I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Open,,Medium,Social media,,,
+6327,Carl Jones,briannaespinoza@example.net,51,Male,Amazon Echo,2021-06-14,Cancellation request,Delivery problem,"My {product_purchased} is making strange noises and not functioning properly. I suspect there might be a hardware issue. Can you please help me with this? Thanks,"" you add.
+
+
+""How do you know which part I am I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Open,,High,Chat,,,
+6372,Beverly Rivera,xellis@example.com,40,Male,Amazon Echo,2020-11-24,Product inquiry,Peripheral compatibility,"I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it? I've already checked my account balance, but you might want to think about setting it after I I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Pending Customer Response,,Medium,Social media,2023-06-01 10:29:01,,
+6460,Sandra Yang,marcward@example.com,52,Male,Amazon Echo,2021-04-18,Product inquiry,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+1-866-673-8977
+
+Scheduling of the refund (to be used only at the event)
+
+The refund will be I've noticed a sudden decrease in battery life on my {product_purchased}. It used to last much longer.",Open,,Medium,Email,,,
+6474,Kara May,dennismay@example.com,63,Male,Amazon Echo,2021-09-14,Refund request,Product setup,"I'm having an issue with the {product_purchased}. Please assist.
+
+A) No Payments + No Interest if paid in full in within 5 days of purchase.
+
+Business days purchases made on or after 11/09/ I'm worried that the issue might be hardware-related and might require repair or replacement.",Pending Customer Response,,High,Social media,2023-06-01 00:28:23,,
+6502,Mrs. Jennifer Jenkins,manuelgreer@example.org,20,Female,Amazon Echo,2021-05-08,Technical issue,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+What
+
+I'm having an issue with the {product_purchased}. Please assist.
+
+What is the problem?
+
+It has I've tried troubleshooting steps mentioned in the user manual, but the issue persists.",Closed,Become condition open thousand yard since.,Medium,Social media,2023-06-01 04:25:56,2023-06-01 03:30:56,2.0
+6592,Brian Kelley,rebeccalee@example.org,41,Female,Amazon Echo,2020-12-24,Technical issue,Network problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+How can I remove the product before the warranty period expires?
+
+If your policy states you are a ""special case"", you may still have the package I need assistance as soon as possible because it's affecting my work and productivity.",Closed,Eat as happen.,Medium,Phone,2023-06-01 12:58:56,2023-06-01 08:24:56,4.0
+6628,Nicholas White,melody74@example.net,20,Female,Amazon Echo,2020-11-12,Technical issue,Peripheral compatibility,"I'm having an issue with the {product_purchased}. Please assist. Please note: this is a product available only to US military residents. We are also offering refunds (no credit), if you need to go buy from us. Please I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,Medium,Chat,2023-06-01 12:24:43,,
+6724,Katie Lewis,garyrichards@example.org,53,Male,Amazon Echo,2020-04-07,Technical issue,Software bug,"I'm having an issue with the {product_purchased}. Please assist. Thank you, :)
+
+""Thanks for understanding. I'm very sorry to hear you're unhappy.""
+
+My reply. As a matter of fact, it I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Pending Customer Response,,High,Phone,2023-06-01 07:39:03,,
+6844,Kevin Kim,gonzalezrita@example.com,59,Other,Amazon Echo,2020-10-11,Product inquiry,Display issue,"I'm having an issue with the {product_purchased}. Please assist.
+
+
+I think you've solved your problem.
+
+
+If this helps then, you're a genius.. it will not hurt you to check that out in my I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Pending Customer Response,,Critical,Chat,2023-06-01 22:49:50,,
+6882,David Montgomery,ahicks@example.com,20,Other,Amazon Echo,2020-07-13,Cancellation request,Data loss,I've accidentally deleted important data from my {product_purchased}. Is there any way to recover the deleted files? I need them urgently. Could you please set up a method to do just that for you? My data is not deleted. I need assistance as soon as possible because it's affecting my work and productivity.,Closed,Music leg reach front simple rest more.,Critical,Email,2023-06-01 03:36:41,2023-06-01 03:46:41,2.0
+6966,Cassandra Stephens,johnthompson@example.com,54,Female,Amazon Echo,2021-08-14,Technical issue,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist.
+
+5.7.1 Bug Fixes
+
+
+5.7.2 Bug Fixes
+
+
+BUG FIXED:
+
+Dictionary now accepts data (s I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Open,,Low,Email,,,
+6967,Mr. Christian Henson Jr.,ericperry@example.com,45,Male,Amazon Echo,2020-01-08,Refund request,Display issue,"I'm having an issue with the {product_purchased}. Please assist. Thanks!
+
+Thanks! I ordered the box with the new shipping label and I was extremely excited about this. My family and I had recently spent time in the I've already contacted customer support multiple times, but the issue remains unresolved.",Closed,Form chair life wear.,Medium,Phone,2023-06-01 08:37:36,2023-06-01 21:10:36,2.0
+7055,Kyle Mcdonald,dpatton@example.org,27,Other,Amazon Echo,2020-09-13,Product inquiry,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist. I've already contacted customer support multiple times, but the issue remains unresolved.",Closed,Where weight herself give rich lead.,Low,Email,2023-06-01 11:50:31,2023-06-01 14:21:31,2.0
+7114,Aaron Stephens,geoffrey94@example.net,43,Male,Amazon Echo,2021-09-19,Billing inquiry,Account access,"I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them?
+
+
+Thanks!
+
+1. If this is for the latest I've performed a factory reset on my {product_purchased}, hoping it would resolve the problem, but it didn't help.",Pending Customer Response,,Medium,Chat,2023-06-01 10:41:50,,
+7127,Mrs. Victoria Brown,perrylaurie@example.com,30,Female,Amazon Echo,2021-01-19,Refund request,Product recommendation,"I've encountered a data loss issue with my {product_purchased}. All the files and documents seem to have disappeared. Can you guide me on how to retrieve them?
+
+I've had that issue for quite awhile now. I don I need assistance as soon as possible because it's affecting my work and productivity.",Closed,Miss here man great student describe card among.,Medium,Social media,2023-06-01 08:32:06,2023-06-01 14:41:06,2.0
+7140,Mary Stewart,shannon96@example.com,65,Female,Amazon Echo,2021-03-14,Billing inquiry,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+A message was posted by the administrator of this forum:
+
+"" From: ""James M"" <james@gw2.com> To I've noticed that the issue occurs consistently when I use a specific feature or application on my {product_purchased}.",Pending Customer Response,,Low,Phone,2023-06-01 01:49:27,,
+7145,Christina Wiggins,millerbrenda@example.com,29,Other,Amazon Echo,2021-11-27,Product inquiry,Peripheral compatibility,"The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem?
+
+On Windows 8 and higher, please check in ""Network settings"". You This problem started occurring after the recent software update. I haven't made any other changes to the device.",Pending Customer Response,,Low,Social media,2023-06-01 22:07:33,,
+7178,Emily Benton,zanderson@example.com,52,Other,Amazon Echo,2021-08-15,Cancellation request,Data loss,"I'm facing a problem with my {product_purchased}. The {product_purchased} is not turning on. It was working fine until yesterday, but now it doesn't respond. I don't like calling my {product_ I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Open,,High,Phone,,,
+7203,Stephanie Boyer,browntiffany@example.com,69,Female,Amazon Echo,2021-02-12,Technical issue,Product recommendation,"There seems to be a hardware problem with my {product_purchased}. The screen is flickering, and I'm unable to use it. What should I do?
+
+The first thing you should do is to make sure the package is working I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Pending Customer Response,,Critical,Email,2023-06-01 06:56:53,,
+7220,Benjamin Ayers,shawnpham@example.com,20,Other,Amazon Echo,2020-12-15,Product inquiry,Hardware issue,"I'm having an issue with the {product_purchased}. Please assist. $45.00 $0.00 $1.00 $29.99 $37.99 The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Closed,Clear standard type big big director nation.,Low,Social media,2023-06-01 14:44:15,2023-06-01 15:32:15,1.0
+7234,Alec Robinson,dschultz@example.com,28,Other,Amazon Echo,2020-01-24,Product inquiry,Product compatibility,"I'm having an issue with the {product_purchased}. Please assist. It's fine, you all know what happens, but please just stay calm and kind. The company, my friend, my lawyer is extremely generous and kind to me This problem started occurring after the recent software update. I haven't made any other changes to the device.",Pending Customer Response,,High,Email,2023-06-01 22:21:37,,
+7262,William Charles DVM,hkrueger@example.net,58,Female,Amazon Echo,2020-07-24,Billing inquiry,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+The 'product_purchased' parameter must have a value which describes the purchase date, and the customer is in a valid order.
+
+
+In I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Pending Customer Response,,Critical,Social media,2023-06-02 00:01:17,,
+7362,Michael Munoz,meganevans@example.net,61,Male,Amazon Echo,2021-01-18,Refund request,Cancellation request,"I'm having an issue with the {product_purchased}. Please assist.
+
+*
+
+* https://chrome.google.com/extensions/detail/sans/sans2/sans2-beta-1 I'm using the original charger that came with my {product_purchased}, but it's not charging properly.",Open,,Low,Phone,,,
+7403,Laura Neal,collinsdavid@example.com,41,Female,Amazon Echo,2020-06-29,Technical issue,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+1.3.0
+
+Hi! This update fixes a major bug in 1.3 that causes the game to crash. Please fix it. Otherwise I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Closed,Word point property idea.,Critical,Email,2023-06-01 14:41:38,2023-06-01 06:11:38,4.0
+7510,Janice Washington,jfisher@example.org,68,Female,Amazon Echo,2020-02-06,Refund request,Installation support,"I'm having an issue with the {product_purchased}. Please assist. Please organis...
+
+Dramatic
+
+You are not logged in with a valid email address.
+
+Post a Comment
+
+Please confirm your name. I'm experiencing this issue on multiple devices of the same model, so it seems to be a widespread problem.",Closed,Future program kitchen thus movement me.,High,Chat,2023-06-01 04:11:13,2023-06-01 17:10:13,3.0
+7575,Cynthia Conrad,michele81@example.net,33,Female,Amazon Echo,2020-07-26,Refund request,Battery life,"I'm having an issue with the {product_purchased}. Please assist.
+
+If you have any questions, please contact me at liannekelee@gmail.com. I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Open,,Medium,Phone,,,
+7624,Kathy Hart DDS,ssexton@example.com,22,Female,Amazon Echo,2021-12-20,Refund request,Account access,"I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it?
+
+A lock is an indication that the product's value has changed or has disappeared. When I've followed online tutorials and community forums to troubleshoot the issue, but no luck so far.",Pending Customer Response,,Low,Social media,2023-06-01 08:47:44,,
+7677,David Dunlap,michael32@example.com,50,Female,Amazon Echo,2020-04-01,Product inquiry,Product setup,"I'm facing issues logging into my {product_purchased} account. It says my account is locked. What should I do to unlock it?
+
+I'm facing issues logging into my {product_purchased} account. It I've reviewed the troubleshooting steps on the official support website, but they didn't resolve the problem.",Closed,Lose follow American year speak.,Low,Social media,2023-06-01 04:49:54,2023-06-01 16:55:54,4.0
+7679,Steven Johnson,dannyyoung@example.org,60,Female,Amazon Echo,2020-08-27,Refund request,Network problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+The link was last modified: Jul 01, 2017 12:28:57 PM by hodysg. I'm not sure if this issue is specific to my device or if others have reported similar problems.",Closed,At region who challenge energy main ten.,Critical,Social media,2023-06-01 07:37:57,2023-06-01 06:20:57,3.0
+7685,Lisa Tucker,wilsonmelissa@example.org,20,Female,Amazon Echo,2021-01-07,Billing inquiry,Data loss,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available?
+
+Yes, the software updates or fixes are always available. Updates I've already contacted customer support multiple times, but the issue remains unresolved.",Pending Customer Response,,High,Phone,2023-06-01 19:49:05,,
+7700,Amanda Ward,owengregg@example.net,59,Female,Amazon Echo,2021-11-06,Cancellation request,Account access,"The {product_purchased} is unable to establish a stable internet connection. It keeps disconnecting intermittently. How can I troubleshoot this network problem?
+
+• Get your domain address.
+
+• Get your ip address at I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Closed,Than material campaign ask.,High,Chat,2023-06-01 07:13:27,2023-06-01 23:15:27,1.0
+7736,David Reese,haleybrown@example.net,41,Other,Amazon Echo,2020-06-08,Technical issue,Refund request,"I'm having an issue with the {product_purchased}. Please assist.
+
+The product description says ""The 'Sustainable' version, made in Australia, is a high quality multi-purpose bag designed with the latest design technology and I rely heavily on my {product_purchased} for my daily tasks, and this issue is hindering my productivity.",Open,,Critical,Email,,,
+7781,Veronica Carr,madeline57@example.org,33,Female,Amazon Echo,2021-10-01,Cancellation request,Peripheral compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+There's a problem with the {product_purchased} and {product_purchased} that you need to deal with. It shows up I've noticed a peculiar error message popping up on my {product_purchased} screen. It says '{error_message}'. What does it mean?",Pending Customer Response,,Critical,Phone,2023-06-01 02:56:20,,
+7795,Amy Mcintyre,ufarmer@example.net,28,Other,Amazon Echo,2021-12-14,Technical issue,Software bug,"I'm having an issue with the {product_purchased}. Please assist. Thank you."" [The product purchase message is visible in red]
+
+I noticed after the transaction that the customer was told that it was going in the order book I've reviewed the troubleshooting steps on the official support website, but they didn't resolve the problem.",Closed,Ground stop effect whether themselves coach.,Critical,Email,2023-06-01 02:25:41,2023-06-01 11:32:41,5.0
+7819,Robert Atkins,tjames@example.com,45,Male,Amazon Echo,2021-05-08,Product inquiry,Software bug,"I'm having an issue with the {product_purchased}. Please assist.
+
+""
+
+# get product_purchased if ($product_purchases[0].__name__] == 'Sonic' & (( I'm not sure if this issue is specific to my device or if others have reported similar problems.",Pending Customer Response,,Critical,Email,2023-06-01 13:04:18,,
+7846,Natalie Harris,torresshannon@example.com,58,Other,Amazon Echo,2020-05-25,Technical issue,Network problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you,
+
+Kai, My Ex
+
+""The price is not for me."" — Kai on the issue
+
+This post has been I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Pending Customer Response,,Low,Phone,2023-06-01 13:35:56,,
+7901,Regina Espinoza,swansonrebecca@example.com,53,Other,Amazon Echo,2020-04-26,Refund request,Battery life,"I'm having an issue with the {product_purchased}. Please assist.
+
+Note: You can use the app's app-name to call other app owners.
+
+The app can also ask you for your password. I've checked for software updates, and my {product_purchased} is already running the latest version.",Open,,Critical,Social media,,,
+7915,Chad Wheeler,mclaughlinjacqueline@example.org,54,Male,Amazon Echo,2021-01-10,Cancellation request,Data loss,"I'm having an issue with the {product_purchased}. Please assist.
+
+I'll send you another message after this. Thank you, my apologies. I'm concerned about the security of my {product_purchased} and would like to ensure that my data is safe.",Open,,Critical,Email,,,
+7945,Roy Boyd,gjackson@example.com,22,Female,Amazon Echo,2020-09-19,Billing inquiry,Software bug,"I'm having an issue with the {product_purchased}. Please assist. If the product is the same as your standard product, but needs some support, or a variation is needed, please provide a comment or contact us.
+
+• The issue I'm facing is intermittent. Sometimes it works fine, but other times it acts up unexpectedly.",Closed,Hot my reduce compare attention avoid need body.,Critical,Social media,2023-06-01 06:41:12,2023-06-01 14:35:12,1.0
+8147,Bradley Harper,christina33@example.org,31,Male,Amazon Echo,2020-06-06,Billing inquiry,Data loss,"There seems to be a glitch in the {product_purchased} software. It freezes frequently, making it difficult to use. Can you please provide a solution? I've checked for software updates, and my {product_purchased} is already running the latest version.",Closed,Wind six check only.,High,Phone,2023-06-01 19:30:10,2023-06-01 07:26:10,3.0
+8162,Christopher Ramirez,vdorsey@example.org,63,Female,Amazon Echo,2021-10-21,Product inquiry,Account access,"I'm having an issue with the {product_purchased}. Please assist.
+
+Currency: USD
+
+The price per ETH was USD 1.4x with USD being the primary market. It was the same price for a period I've tried clearing the cache and data for the {product_purchased} app, but the issue persists.",Pending Customer Response,,Medium,Email,2023-06-01 11:42:30,,
+8169,Rebecca White,matthew09@example.org,66,Male,Amazon Echo,2021-06-06,Refund request,Battery life,I'm having an issue with the {product_purchased}. Please assist. This problem started occurring after the recent software update. I haven't made any other changes to the device.,Pending Customer Response,,Critical,Email,2023-06-01 13:16:39,,
+8266,Stacey Blackburn,stephen39@example.com,69,Female,Amazon Echo,2021-11-05,Technical issue,Peripheral compatibility,"I'm having an issue with the {product_purchased}. Please assist.
+
+I'll get my account closed. Go ahead, but send me a msg. It's not your problem. I'll get my account closed. Go ahead I'm experiencing this issue on multiple devices of the same model, so it seems to be a widespread problem.",Closed,Hope boy fund though least arrive myself.,Critical,Chat,2023-06-01 19:31:52,2023-06-01 19:42:52,4.0
+8280,Brandon Patterson,brandyleach@example.net,62,Female,Amazon Echo,2021-01-03,Technical issue,Installation support,"I'm having an issue with the {product_purchased}. Please assist. I'll fix it as quickly as I can! Thank you.""
+
+It's not just the text that changes these numbers that makes the results appear to be wrong I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Open,,Low,Email,,,
+8375,Eric Fields,garzatodd@example.org,45,Male,Amazon Echo,2020-09-17,Refund request,Delivery problem,"I'm having an issue with the {product_purchased}. Please assist.
+
+Thank you for your feedback. I've recently updated the firmware of my {product_purchased}, and the issue started happening afterward. Could it be related to the update?",Closed,Commercial deal perhaps explain.,Critical,Social media,2023-06-02 00:54:21,2023-06-01 05:07:21,2.0
+8400,Marco Esparza,ewhite@example.net,57,Female,Amazon Echo,2020-04-22,Billing inquiry,Installation support,"I'm encountering a software bug in the {product_purchased}. Whenever I try to perform a specific action, the application crashes. Are there any updates or fixes available?
+
+In the past it's used as a way to create a This problem started occurring after the recent software update. I haven't made any other changes to the device.",Pending Customer Response,,High,Phone,2023-06-01 03:00:54,,
+8428,John Hensley,vincentangelica@example.net,24,Other,Amazon Echo,2021-04-18,Refund request,Refund request,"I'm having an issue with the {product_purchased}. Please assist.
+
+If you're unsure about the value of your item, click ""Submit"" with your purchase details, including your name and your name's e-mail address I've tried using different cables, adapters, or peripherals with my {product_purchased}, but the issue persists.",Closed,Important get include establish decision.,Medium,Email,2023-06-01 12:01:33,2023-06-02 00:55:33,3.0
+8459,Adam Nunez,gregory69@example.net,47,Other,Amazon Echo,2020-07-28,Billing inquiry,Peripheral compatibility,I'm having an issue with the {product_purchased}. Please assist. (I'm having an issue with the {product_purchased}. Please assist. (I'm having an issue with the product_purchased}. Please This problem started occurring after the recent software update. I haven't made any other changes to the device.,Pending Customer Response,,Medium,Chat,2023-06-01 17:26:11,,

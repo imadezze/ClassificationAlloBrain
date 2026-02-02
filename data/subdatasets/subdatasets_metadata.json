@@ -1,0 +1,369 @@
+{
+  "source_file": "data/customer_support_tickets.csv",
+  "total_tickets": 8469,
+  "columns": [
+    "Ticket ID",
+    "Customer Name",
+    "Customer Email",
+    "Customer Age",
+    "Customer Gender",
+    "Product Purchased",
+    "Date of Purchase",
+    "Ticket Type",
+    "Ticket Subject",
+    "Ticket Description",
+    "Ticket Status",
+    "Resolution",
+    "Ticket Priority",
+    "Ticket Channel",
+    "First Response Time",
+    "Time to Resolution",
+    "Customer Satisfaction Rating"
+  ],
+  "subdatasets": [
+    {
+      "filename": "random_sample_50.csv",
+      "description": "Random sample of 50 tickets",
+      "size": 50,
+      "method": "random_sample"
+    },
+    {
+      "filename": "random_sample_100.csv",
+      "description": "Random sample of 100 tickets",
+      "size": 100,
+      "method": "random_sample"
+    },
+    {
+      "filename": "random_sample_200.csv",
+      "description": "Random sample of 200 tickets",
+      "size": 200,
+      "method": "random_sample"
+    },
+    {
+      "filename": "random_sample_500.csv",
+      "description": "Random sample of 500 tickets",
+      "size": 500,
+      "method": "random_sample"
+    },
+    {
+      "filename": "random_sample_1000.csv",
+      "description": "Random sample of 1000 tickets",
+      "size": 1000,
+      "method": "random_sample"
+    },
+    {
+      "filename": "random_sample_2000.csv",
+      "description": "Random sample of 2000 tickets",
+      "size": 2000,
+      "method": "random_sample"
+    },
+    {
+      "filename": "ticket_type_refund_request.csv",
+      "description": "All tickets of type: Refund request",
+      "size": 1752,
+      "method": "filter_by_ticket_type",
+      "filter_value": "Refund request"
+    },
+    {
+      "filename": "ticket_type_technical_issue.csv",
+      "description": "All tickets of type: Technical issue",
+      "size": 1747,
+      "method": "filter_by_ticket_type",
+      "filter_value": "Technical issue"
+    },
+    {
+      "filename": "ticket_type_cancellation_request.csv",
+      "description": "All tickets of type: Cancellation request",
+      "size": 1695,
+      "method": "filter_by_ticket_type",
+      "filter_value": "Cancellation request"
+    },
+    {
+      "filename": "ticket_type_product_inquiry.csv",
+      "description": "All tickets of type: Product inquiry",
+      "size": 1641,
+      "method": "filter_by_ticket_type",
+      "filter_value": "Product inquiry"
+    },
+    {
+      "filename": "ticket_type_billing_inquiry.csv",
+      "description": "All tickets of type: Billing inquiry",
+      "size": 1634,
+      "method": "filter_by_ticket_type",
+      "filter_value": "Billing inquiry"
+    },
+    {
+      "filename": "priority_medium.csv",
+      "description": "All Medium priority tickets",
+      "size": 2192,
+      "method": "filter_by_priority",
+      "filter_value": "Medium"
+    },
+    {
+      "filename": "priority_critical.csv",
+      "description": "All Critical priority tickets",
+      "size": 2129,
+      "method": "filter_by_priority",
+      "filter_value": "Critical"
+    },
+    {
+      "filename": "priority_high.csv",
+      "description": "All High priority tickets",
+      "size": 2085,
+      "method": "filter_by_priority",
+      "filter_value": "High"
+    },
+    {
+      "filename": "priority_low.csv",
+      "description": "All Low priority tickets",
+      "size": 2063,
+      "method": "filter_by_priority",
+      "filter_value": "Low"
+    },
+    {
+      "filename": "status_pending_customer_response.csv",
+      "description": "All tickets with status: Pending Customer Response",
+      "size": 2881,
+      "method": "filter_by_status",
+      "filter_value": "Pending Customer Response"
+    },
+    {
+      "filename": "status_open.csv",
+      "description": "All tickets with status: Open",
+      "size": 2819,
+      "method": "filter_by_status",
+      "filter_value": "Open"
+    },
+    {
+      "filename": "status_closed.csv",
+      "description": "All tickets with status: Closed",
+      "size": 2769,
+      "method": "filter_by_status",
+      "filter_value": "Closed"
+    },
+    {
+      "filename": "product_canon_eos.csv",
+      "description": "All tickets for product: Canon EOS",
+      "size": 240,
+      "method": "filter_by_product",
+      "filter_value": "Canon EOS"
+    },
+    {
+      "filename": "product_gopro_hero.csv",
+      "description": "All tickets for product: GoPro Hero",
+      "size": 228,
+      "method": "filter_by_product",
+      "filter_value": "GoPro Hero"
+    },
+    {
+      "filename": "product_nest_thermostat.csv",
+      "description": "All tickets for product: Nest Thermostat",
+      "size": 225,
+      "method": "filter_by_product",
+      "filter_value": "Nest Thermostat"
+    },
+    {
+      "filename": "product_philips_hue_lights.csv",
+      "description": "All tickets for product: Philips Hue Lights",
+      "size": 221,
+      "method": "filter_by_product",
+      "filter_value": "Philips Hue Lights"
+    },
+    {
+      "filename": "product_amazon_echo.csv",
+      "description": "All tickets for product: Amazon Echo",
+      "size": 221,
+      "method": "filter_by_product",
+      "filter_value": "Amazon Echo"
+    },
+    {
+      "filename": "product_lg_smart_tv.csv",
+      "description": "All tickets for product: LG Smart TV",
+      "size": 219,
+      "method": "filter_by_product",
+      "filter_value": "LG Smart TV"
+    },
+    {
+      "filename": "product_sony_xperia.csv",
+      "description": "All tickets for product: Sony Xperia",
+      "size": 217,
+      "method": "filter_by_product",
+      "filter_value": "Sony Xperia"
+    },
+    {
+      "filename": "product_roomba_robot_vacuum.csv",
+      "description": "All tickets for product: Roomba Robot Vacuum",
+      "size": 216,
+      "method": "filter_by_product",
+      "filter_value": "Roomba Robot Vacuum"
+    },
+    {
+      "filename": "product_apple_airpods.csv",
+      "description": "All tickets for product: Apple AirPods",
+      "size": 213,
+      "method": "filter_by_product",
+      "filter_value": "Apple AirPods"
+    },
+    {
+      "filename": "product_lg_oled.csv",
+      "description": "All tickets for product: LG OLED",
+      "size": 213,
+      "method": "filter_by_product",
+      "filter_value": "LG OLED"
+    },
+    {
+      "filename": "channel_email.csv",
+      "description": "All tickets from Email channel",
+      "size": 2143,
+      "method": "filter_by_channel",
+      "filter_value": "Email"
+    },
+    {
+      "filename": "channel_phone.csv",
+      "description": "All tickets from Phone channel",
+      "size": 2132,
+      "method": "filter_by_channel",
+      "filter_value": "Phone"
+    },
+    {
+      "filename": "channel_social_media.csv",
+      "description": "All tickets from Social media channel",
+      "size": 2121,
+      "method": "filter_by_channel",
+      "filter_value": "Social media"
+    },
+    {
+      "filename": "channel_chat.csv",
+      "description": "All tickets from Chat channel",
+      "size": 2073,
+      "method": "filter_by_channel",
+      "filter_value": "Chat"
+    },
+    {
+      "filename": "stratified_sample_50.csv",
+      "description": "Stratified sample of 50 tickets (balanced by ticket type)",
+      "size": 50,
+      "method": "stratified_sample"
+    },
+    {
+      "filename": "stratified_sample_100.csv",
+      "description": "Stratified sample of 100 tickets (balanced by ticket type)",
+      "size": 100,
+      "method": "stratified_sample"
+    },
+    {
+      "filename": "stratified_sample_200.csv",
+      "description": "Stratified sample of 200 tickets (balanced by ticket type)",
+      "size": 200,
+      "method": "stratified_sample"
+    },
+    {
+      "filename": "stratified_sample_500.csv",
+      "description": "Stratified sample of 500 tickets (balanced by ticket type)",
+      "size": 500,
+      "method": "stratified_sample"
+    },
+    {
+      "filename": "stratified_sample_1000.csv",
+      "description": "Stratified sample of 1000 tickets (balanced by ticket type)",
+      "size": 1000,
+      "method": "stratified_sample"
+    },
+    {
+      "filename": "stratified_sample_2000.csv",
+      "description": "Stratified sample of 2000 tickets (balanced by ticket type)",
+      "size": 2000,
+      "method": "stratified_sample"
+    },
+    {
+      "filename": "edge_case_missing_ratings.csv",
+      "description": "Tickets without satisfaction ratings",
+      "size": 100,
+      "method": "edge_case"
+    },
+    {
+      "filename": "quality_high_satisfaction.csv",
+      "description": "Tickets with high satisfaction ratings (4-5 stars)",
+      "size": 500,
+      "method": "filter_by_quality"
+    },
+    {
+      "filename": "quality_low_satisfaction.csv",
+      "description": "Tickets with low satisfaction ratings (1-2 stars)",
+      "size": 500,
+      "method": "filter_by_quality"
+    },
+    {
+      "filename": "time_recent_2021_onwards.csv",
+      "description": "Recent tickets (2021 onwards)",
+      "size": 1000,
+      "method": "filter_by_date"
+    },
+    {
+      "filename": "time_older_before_2021.csv",
+      "description": "Older tickets (before 2021)",
+      "size": 1000,
+      "method": "filter_by_date"
+    },
+    {
+      "filename": "excel/random_sample_100.xlsx",
+      "description": "Random sample - 100 tickets (Excel format)",
+      "size": 100,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/random_sample_500.xlsx",
+      "description": "Random sample - 500 tickets (Excel format)",
+      "size": 500,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/stratified_sample_100.xlsx",
+      "description": "Stratified sample - 100 tickets (Excel format)",
+      "size": 100,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/ticket_type_technical_issue.xlsx",
+      "description": "Technical issues only (Excel format)",
+      "size": 1747,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/ticket_type_billing_inquiry.xlsx",
+      "description": "Billing inquiries only (Excel format)",
+      "size": 1634,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/priority_critical.xlsx",
+      "description": "Critical priority tickets (Excel format)",
+      "size": 2129,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/status_open.xlsx",
+      "description": "Open tickets (Excel format)",
+      "size": 2819,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/quality_high_satisfaction.xlsx",
+      "description": "High satisfaction ratings (Excel format)",
+      "size": 500,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/quality_low_satisfaction.xlsx",
+      "description": "Low satisfaction ratings (Excel format)",
+      "size": 500,
+      "method": "excel_export"
+    },
+    {
+      "filename": "excel/channel_email.xlsx",
+      "description": "Email channel tickets (Excel format)",
+      "size": 2143,
+      "method": "excel_export"
+    }
+  ]
+}
